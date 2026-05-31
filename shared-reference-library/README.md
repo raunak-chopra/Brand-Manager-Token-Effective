@@ -34,4 +34,4 @@ brands/[Brand Name]/reference-library/
 - If a reusable pattern becomes useful across brands, summarize the learning in the relevant `skills/[skill]/` file instead of relying on the raw reference alone.
 - Do not treat inspiration as proof, license approval, legal guidance, or market data.
 - When brand and shared reference folders are empty or insufficient, use the Envato asset catalog as a support library. Brand rules still override Envato references.
-- Raunak has confirmed that items in the available asset/reference folders have proper licenses, including Alfabet font and other supplied items. Do not invent specific license terms or usage rights beyond supplied confirmation.
+- Treat supplied asset/reference folders as usable only when license proof or usage approval has been supplied. Do not invent specific license terms or usage rights beyond supplied confirmation.

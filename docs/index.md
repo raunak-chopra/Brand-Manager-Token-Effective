@@ -1,6 +1,6 @@
-# Brand & Performance Marketing Bot
+# Brand Manager Bot
 
-This is the GitHub Pages entry point for the Marketing Bot workspace.
+This is the GitHub Pages entry point for the Brand Manager Bot workspace.
 
 ## Start Here
 

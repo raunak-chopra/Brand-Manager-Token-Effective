@@ -20,7 +20,7 @@ Use these additions to make the bot stronger without making the workspace heavy.
 - Old exports when a final file exists
 - Tool docs for platforms you do not use
 - Empty experiment folders with no decisions
-- Generic files that duplicate the active `Marketing Bot` workspace
+- Generic files that duplicate the active Brand Manager Bot workspace
 
 ## Keep
 

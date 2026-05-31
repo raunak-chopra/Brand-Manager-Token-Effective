@@ -10,7 +10,7 @@ Use this guide when a task needs external visual reference, templates, mockups, 
 | Bot catalog JSON | `C:\Users\raunak.chopra\Downloads\Envato_Organized\Envato_Asset_Catalog.json` |
 | Human catalog workbook | `C:\Users\raunak.chopra\Downloads\Envato_Organized\Envato_Asset_Catalog.xlsx` |
 | Human catalog CSV | `C:\Users\raunak.chopra\Downloads\Envato_Organized\Envato_Asset_Catalog.csv` |
-| Bot config | `C:\Users\raunak.chopra\Downloads\Envato_Organized\Marketing_Bot_Asset_Library_Config.json` |
+| Bot config | `[To be supplied]` |
 
 ## Priority Rule
 
@@ -24,9 +24,7 @@ Envato never overrides confirmed brand rules for colors, typography, logo use, v
 
 ## License Status
 
-Raunak has confirmed that items in the available asset/reference folders have proper licenses, including Alfabet font and other supplied items.
-
-Treat the current organized library and copied workspace assets as licensed for workspace use. Do not invent specific license terms, redistribution rights, exclusivity, trademark clearances, or third-party usage permissions beyond the supplied confirmation. For any new external asset added later, verify the specific license and usage rights before client delivery or external publication.
+Treat the current organized library and copied workspace assets as usable only when license proof or usage approval has been supplied. Do not invent specific license terms, redistribution rights, exclusivity, trademark clearances, or third-party usage permissions beyond the supplied confirmation. For any new external asset added later, verify the specific license and usage rights before client delivery or external publication.
 
 ## When To Use Envato
 

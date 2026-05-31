@@ -1,10 +1,10 @@
-# Marketing Bot Cheatsheet
+# Brand Manager Bot Cheatsheet
 
 ## Start Here
 
 ```text
-Brand: Spunge
-First read: brands/Spunge/context-index.md
+Brand: [Brand Name]
+First read: brands/[Brand Name]/context-index.md
 Task: [specific output]
 Use [To be supplied] for missing facts.
 ```
@@ -27,6 +27,7 @@ Load small: brand index -> needed intake/guideline section -> `agents/ROUTER.md`
 | Tool registry | `tools/REGISTRY.md` |
 | Security rules | `SECURITY.md` |
 | Missing inputs | `missing-inputs.md` |
+| 2nd Brain workflow | `skills/second-brain/SKILL.md` |
 
 ## Main Folders
 
@@ -34,16 +35,35 @@ Load small: brand index -> needed intake/guideline section -> `agents/ROUTER.md`
 |---|---|
 | `brands/` | Brand workspaces |
 | `brands/_template/` | New brand starter |
-| `brands/Spunge/` | Spunge source of truth |
 | `agents/` | Specialist roles |
-| `old agents - DO NOT EDIT/` | Legacy archive only; do not load in chats |
 | `skills/` | Compact routers; deeper detail in `references/` |
-| `old skills - DO NOT EDIT/` | Legacy archive only; do not load in chats |
 | `tools/` | Platform docs and CLI stubs |
 | `outputs/` | Final/shareable deliverables |
 | `shared-reference-library/` | Reusable inspiration |
-| `inbox/` | Temporary unsorted files |
 | `docs/` | Process docs |
+
+## Question Starters
+
+For a new brand, ask only what is missing:
+
+- Product/category
+- Primary audience
+- Core promise
+- Desired perception
+- Competitors or category references
+- First-use touchpoints
+- Mandatory assets, colors, fonts, claims, or legal rules
+- Rejected styles
+- Reference folders
+
+For a deliverable, ask only what blocks the output:
+
+- Visual identity: references, assets, colors, fonts, touchpoints, format.
+- Copy: voice, proof, offer terms, compliance limits, channel.
+- Paid media: platform, budget, audience, conversion event, tracking status.
+- Email: lifecycle stage, segment, trigger, offer, compliance rules.
+- CRO: URL or screenshot, conversion goal, traffic source, current metrics.
+- 2nd Brain: evidence source, confirmed learning, confidence level, where it should be reused.
 
 ## Tool Safety
 
@@ -65,6 +85,8 @@ Load small: brand index -> needed intake/guideline section -> `agents/ROUTER.md`
 | Approved/rejected refs | `brands/[Brand]/reference-library/approved/` or `rejected/` |
 | Logos/photos/templates | `brands/[Brand]/assets/` |
 | Claim proof | `brands/[Brand]/assets/claims-sources/` |
+| Brand learnings | `brands/[Brand]/learnings-registry.md` |
+| Experiments | `brands/[Brand]/experiments-backlog.md` |
 | Final/shareable outputs | `outputs/[Brand]/YYYY-MM-DD-[deliverable-name].md` |
 | General inspiration | `shared-reference-library/` |
 
@@ -73,6 +95,7 @@ Load small: brand index -> needed intake/guideline section -> `agents/ROUTER.md`
 | Task | Agent | Skill |
 |---|---|---|
 | Moodboard/brand book | `visual-identity-director` | `visual-identity-system` |
+| Strategy/positioning | `planner` or `researcher` | `brand-strategy` |
 | Copy/ads | `copywriter` | `copy-system` or `ad-creative` |
 | Paid media plan | `attraction-specialist` | `paid-media` |
 | Voice review | `brand-voice-guardian` | `copy-system` |
@@ -80,19 +103,10 @@ Load small: brand index -> needed intake/guideline section -> `agents/ROUTER.md`
 | Email sequence | `email-wizard` | `email-lifecycle` |
 | Campaign calendar | `planner` | `content-system` |
 | Research/personas | `researcher` or `persona-builder` | `customer-insight` |
+| Performance review / learnings | `researcher` | `second-brain` or `conversion-system` |
+| Experiment planning | `conversion-optimizer` | `conversion-system` or `second-brain` |
 
 Full routing: `docs/agent-skill-workflows.md`.
-
-## Spunge Next Inputs
-
-- Logo source files and lockups
-- Font licenses
-- Product/packaging/lifestyle photography
-- Packaging source files
-- Approved and rejected references
-- Generic category screenshots
-- Clinical claim and patent/source proof
-- Social, ad, deck, e-commerce templates
 
 ## Do Not Do
 
@@ -101,6 +115,6 @@ Full routing: `docs/agent-skill-workflows.md`.
 - Do not read `old skills - DO NOT EDIT/` during normal chats.
 - Do not read `old agents - DO NOT EDIT/` during normal chats.
 - Do not invent claims, stats, licenses, legal rules, or source references.
-- Do not keep final files in `inbox/`.
+- Do not keep final files in temporary folders.
 - Do not add tools to `tools/REGISTRY.md` unless matching docs exist.
 - Do not commit `.env`, credential files, `node_modules`, scratch previews, or raw platform exports.

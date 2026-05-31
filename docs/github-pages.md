@@ -1,15 +1,15 @@
 # GitHub Pages Setup
 
-Use this after the `marketing-bot` repository exists on GitHub and the first commit has been pushed.
+Use this after the `Brand-Manager` repository exists on GitHub and the first commit has been pushed.
 
 ## Settings
 
-- Repository: `raunak-chopra/marketing-bot`
-- Visibility: private
+- Repository: `raunak-chopra/Brand-Manager`
+- Visibility: `[To be supplied]`
 - Pages source: `Deploy from a branch`
 - Branch: `main`
 - Folder: `/docs`
-- Expected URL: `https://raunak-chopra.github.io/marketing-bot/`
+- Expected URL: `https://raunak-chopra.github.io/Brand-Manager/`
 
 ## Update Rules
 

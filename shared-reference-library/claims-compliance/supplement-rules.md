@@ -1,6 +1,6 @@
 # Nutraceutical Claims Compliance Guidelines (Supplement Rules)
 
-Use this guide to validate copywriting, advertisements, packaging copy, and website claims for supplement brands (such as Spunge).
+Use this guide to validate copywriting, advertisements, packaging copy, and website claims for supplement brands.
 
 ---
 
@@ -15,7 +15,7 @@ Supplement brands targeting the Indian market must adhere to the Food Safety and
 
 ### Permitted Claims
 * **Structure-Function Claims:** Describe how a nutrient/ingredient supports the normal structure or function of the body (e.g., "helps support healthy digestion," "supports normal cellular function").
-* **Absorption / Bioavailability Claims:** Permitted when backed by ingredient science or clinical validation (e.g., Spunge's "science-forward absorption" core promise).
+* **Absorption / Bioavailability Claims:** Permitted only when backed by ingredient science, clinical validation, or another supplied source.
 * **Nutritional Content Claims:** Stating the presence of vitamins or minerals (e.g., "high in Vitamin D3").
 
 ---

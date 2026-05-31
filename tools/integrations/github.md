@@ -45,5 +45,5 @@ Git automation may stage and commit only after these checks pass:
 - No invented claims, market data, source references, or performance results are introduced.
 - Brand-specific work remains inside `brands/[Brand Name]/`.
 - Final/shareable deliverables remain in `outputs/[Brand Name]/`.
-- Spunge memory, assets, references, and outputs are not staged here.
+- Brand-specific private assets, raw exports, and unsupported claims are not staged unless explicitly approved.
 - Commit includes only files relevant to the requested task.

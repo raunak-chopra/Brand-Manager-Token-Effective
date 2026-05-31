@@ -21,9 +21,9 @@ Comprehensive lead nurturing sequences aligned with CRM workflow `[To be supplie
 | Task | Agent | Trigger |
 |------|-------|---------|
 | Sequence design | `email-wizard` | New sequence request |
-| Lead scoring | `lead-qualifier` | Engagement events |
+| Lead scoring | `persona-builder` | Engagement events |
 | Copy creation | `copywriter` | Email drafting |
-| Sales handoff | `sales-enabler` | Score reaches 70+ |
+| Sales handoff | `copywriter` | Score reaches 70+ |
 
 ## Welcome Sequence (7 Days)
 
@@ -233,5 +233,5 @@ Day 21: Sunset (remove if no engagement)
 
 ### Agents
 - `email-wizard` - Sequence creation
-- `lead-qualifier` - Score calculation
-- `sales-enabler` - Handoff preparation
+- `persona-builder` - Score calculation
+- `copywriter` - Handoff preparation

@@ -5,6 +5,9 @@ Use this file as the first read for this brand.
 ## Brand
 [To be supplied]
 
+## Intake Status
+[Not Started / In Progress / Complete / To be supplied]
+
 ## Category
 [To be supplied]
 
@@ -20,6 +23,18 @@ Use this file as the first read for this brand.
 ## First-Use Touchpoints
 [To be supplied]
 
+## Performance Snapshot
+
+| Field | Status |
+|---|---|
+| Business Model | [To be supplied] |
+| Primary Conversion Event | [To be supplied] |
+| Target CAC / CPA | [To be supplied] |
+| Target ROAS | [To be supplied] |
+| Active Channels | [To be supplied] |
+| Tracking Status | [To be supplied] |
+| Current Offer | [To be supplied] |
+
 ## Source Of Truth
 
 | Need | File |
@@ -30,6 +45,8 @@ Use this file as the first read for this brand.
 | Moodboard routes | `moodboard-territories.md` |
 | Brand book | `brand-book.md` |
 | Asset checklist | `asset-checklist.md` |
+| Learnings registry | `learnings-registry.md` |
+| Experiments backlog | `experiments-backlog.md` |
 
 ## Reference Folders
 
@@ -57,4 +74,4 @@ Use this file as the first read for this brand.
 
 ## Update Rule
 
-Keep this file as the fast-loading summary. Add only confirmed rules and source paths. Put longer context in `brand-intake.md`, `brand-guidelines/`, `reference-index.md`, or `asset-checklist.md`.
+Keep this file as the fast-loading summary. Add only confirmed rules and source paths. Put longer context in `brand-intake.md`, `brand-guidelines/`, `reference-index.md`, `asset-checklist.md`, `learnings-registry.md`, or `experiments-backlog.md`.

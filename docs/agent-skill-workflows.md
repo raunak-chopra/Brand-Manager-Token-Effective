@@ -18,6 +18,7 @@ Use one primary agent and one active merged skill by default. If agent choice is
 | Customer research | `agents/persona-builder.md` or `agents/researcher.md` | `skills/customer-insight/SKILL.md` |
 | Content calendar | `agents/planner.md` | `skills/content-system/SKILL.md` |
 | Creative hooks | `agents/brainstormer.md` | `skills/copy-system/SKILL.md` |
+| Performance review or learning extraction | `agents/researcher.md` | `skills/second-brain/SKILL.md` or `skills/conversion-system/SKILL.md` |
 
 ## Visual Identity Workflow
 
@@ -84,6 +85,35 @@ Agent: agents/brand-voice-guardian.md
 
 Task:
 Review this for tone, clarity, brand fit, and claim risk.
+```
+
+### Performance Review
+
+```text
+Brand: [Brand]
+First read: brands/[Brand]/context-index.md
+Also read: brands/[Brand]/learnings-registry.md and experiments-backlog.md
+Agent: agents/researcher.md
+Skill: skills/second-brain/SKILL.md
+
+Task:
+Review this campaign or performance data.
+Separate confirmed learnings from proposed learnings.
+Update the learnings registry only if requested.
+```
+
+### Experiment Planning
+
+```text
+Brand: [Brand]
+First read: brands/[Brand]/context-index.md
+Also read: brands/[Brand]/experiments-backlog.md
+Agent: agents/conversion-optimizer.md
+Skill: skills/conversion-system/SKILL.md
+
+Task:
+Create or prioritize experiments based on current evidence.
+Use [To be supplied] for missing metrics, traffic, or tracking details.
 ```
 
 ## Upgrade Prompt

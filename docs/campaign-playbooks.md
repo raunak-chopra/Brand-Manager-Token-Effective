@@ -2,14 +2,16 @@
 
 Proven templates for executing different campaign types.
 
+Before using a playbook, check `brands/[Brand]/brand-intake.md`. If intake is `Not Started`, ask the essential brand and performance questions first; if it is `In Progress`, proceed with `[To be supplied]` placeholders and readiness risks.
+
 ## Playbook Index
 
 | Campaign Type | Best For | Timeline | Agents |
 |---------------|----------|----------|--------|
 | Product Launch | New products/features | 4-8 weeks | planner, copywriter, email-wizard |
-| Lead Generation | Pipeline building | Ongoing | attraction-specialist, lead-qualifier |
+| Lead Generation | Pipeline building | Ongoing | attraction-specialist, persona-builder |
 | Brand Awareness | Market entry, refresh | 8-12 weeks | brainstormer, copywriter |
-| Retention | Reduce churn | Ongoing | continuity-specialist, email-wizard |
+| Retention | Reduce churn | Ongoing | email-wizard, conversion-optimizer |
 | Event Promotion | Webinars, conferences | 4-6 weeks | planner, email-wizard |
 | Seasonal | Holiday, quarterly | 2-4 weeks | copywriter, planner |
 
@@ -101,7 +103,7 @@ Proven templates for executing different campaign types.
 
 **Goal:** Build qualified pipeline consistently
 **Timeline:** Ongoing program
-**Agents:** `attraction-specialist`, `lead-qualifier`, `email-wizard`
+**Agents:** `attraction-specialist`, `persona-builder`, `email-wizard`
 
 ### Content Engine
 
@@ -119,7 +121,7 @@ Proven templates for executing different campaign types.
 |------|-----------|-------|
 | Lead magnets | 1/quarter | `copywriter` |
 | Webinars | 1/month | `planner` |
-| Case studies | 2/quarter | `sales-enabler` |
+| Case studies | 2/quarter | `copywriter` |
 
 ### Lead Capture
 
@@ -226,7 +228,7 @@ Proven templates for executing different campaign types.
 
 **Goal:** Reduce churn, increase LTV
 **Timeline:** Ongoing program
-**Agents:** `continuity-specialist`, `email-wizard`, `upsell-maximizer`
+**Agents:** `email-wizard`, `conversion-optimizer`, `copywriter`
 
 ### Churn Signals
 
@@ -326,9 +328,9 @@ Proven templates for executing different campaign types.
 | Campaign Type | Lead Agent | Supporting Agents |
 |---------------|------------|-------------------|
 | Product Launch | `planner` | copywriter, email-wizard, attraction-specialist |
-| Lead Generation | `attraction-specialist` | lead-qualifier, email-wizard, copywriter |
+| Lead Generation | `attraction-specialist` | persona-builder, email-wizard, copywriter |
 | Brand Awareness | `brainstormer` | copywriter, researcher |
-| Retention | `continuity-specialist` | email-wizard, upsell-maximizer |
+| Retention | `email-wizard` | conversion-optimizer, copywriter |
 | Event Promotion | `planner` | email-wizard, copywriter |
 
 ---

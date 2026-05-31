@@ -12,7 +12,7 @@ Client-ready reporting frameworks aligned with sales workflow `[To be supplied]`
 | Task | Agent | Trigger |
 |------|-------|---------|
 | Data compilation | `researcher` | Report generation |
-| Funnel analysis | `lead-qualifier` | Conversion review |
+| Funnel analysis | `conversion-optimizer` | Conversion review |
 | Insights narrative | `copywriter` | Executive summary |
 | Recommendations | `planner` | Strategy planning |
 

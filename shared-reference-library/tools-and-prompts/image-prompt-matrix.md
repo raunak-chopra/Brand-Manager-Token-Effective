@@ -18,15 +18,15 @@ To create a premium, state-of-the-art visual style, prompts should use:
 
 ### Formula A: Minimalist Product Render (Pouch / Bottle)
 > **Prompt:** `[Product/Packaging Type] standing on a [Material/Texture] plinth, minimalist clean aesthetic, [Background Color/Gradient], soft professional studio lighting, depth of field, commercial product photography, 8k resolution, shot on 50mm lens --ar 16:9 --v 6.0 --style raw`
-* *Example (Spunge Supplement):* `A frosted glass stand-up supplement pouch standing on a dark natural basalt stone plinth, minimalist clean aesthetic, dark cyan and navy blue gradient background, soft professional studio lighting, volumetric light rays, depth of field, commercial product photography, 8k resolution --ar 16:9 --v 6.0 --style raw`
+* *Example (Supplement Brand):* `A frosted glass stand-up supplement pouch standing on a dark natural basalt stone plinth, minimalist clean aesthetic, emerald and deep blue gradient background, soft professional studio lighting, volumetric light rays, depth of field, commercial product photography, 8k resolution --ar 16:9 --v 6.0 --style raw`
 
 ### Formula B: Lifestyle / Active Context
 > **Prompt:** `A close-up shot of [Target Audience Profile] using [Product/Asset], showing a feeling of [Desired Emotion], [Environment setting], natural morning sunlight, clean color palette, cinematic lighting, editorial aesthetic, shot on Arri Alexa --ar 16:9 --style raw`
-* *Example (Spunge Supplement):* `A close-up shot of a healthy urban Indian man in his early 30s taking a supplement capsule with water, showing a feeling of vitality and focus, modern bright apartment kitchen, natural morning sunlight streaming through windows, clean color palette, cinematic lighting, editorial aesthetic --ar 16:9 --style raw`
+* *Example (Supplement Brand):* `A close-up shot of a health-conscious urban adult taking a supplement capsule with water, showing a feeling of vitality and focus, modern bright apartment kitchen, natural morning sunlight streaming through windows, clean color palette, cinematic lighting, editorial aesthetic --ar 16:9 --style raw`
 
 ### Formula C: Flat Lay (Ingredients & Concept)
 > **Prompt:** `Flat lay composition of [Product/Packaging] surrounded by raw ingredients [Ingredient A, B, C], arranged artistically on a [Surface type], soft diffused lighting, clean shadows, overhead shot, editorial food/health magazine style --ar 1:1 --style raw`
-* *Example (Spunge Supplement):* `Flat lay composition of a dark cyan supplement bottle surrounded by clinical raw herbal extracts, pure water droplets, and micro-nutrients, arranged artistically on a neutral light gray concrete surface, soft diffused lighting, clean shadows, overhead shot, editorial wellness magazine style --ar 1:1 --style raw`
+* *Example (Supplement Brand):* `Flat lay composition of a premium supplement bottle surrounded by raw herbal extracts, pure water droplets, and micro-nutrients, arranged artistically on a neutral light gray concrete surface, soft diffused lighting, clean shadows, overhead shot, editorial wellness magazine style --ar 1:1 --style raw`
 
 ---
 

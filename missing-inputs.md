@@ -1,6 +1,6 @@
 # Files And Information To Fill Or Update
 
-Use this as the running checklist for completing the Marketing Bot workspace. Mark items complete only when the source file or fact has been supplied.
+Use this as the running checklist for completing the Brand Manager Bot workspace. Mark items complete only when the source file or fact has been supplied.
 
 ## Workspace-Level Files
 
@@ -20,6 +20,24 @@ Use this as the running checklist for completing the Marketing Bot workspace. Ma
 | `tools/REGISTRY.md` | Add tools only when matching integration docs exist | High |
 | `tools/clis/README.md` | Add CLI commands only after scripts exist and usage is tested | Medium |
 
+## Repo Questions To Answer
+
+These questions make the workspace sharper without tying it to a single brand.
+
+| Question | Where To Store The Answer |
+|---|---|
+| Which output formats should be default: Markdown, PPTX, PDF, Figma brief, Canva brief, spreadsheet, or another format? | `README.md`, `outputs/README.md`, and relevant output templates |
+| Which brand categories will this repo handle most often? | `README.md` and relevant `skills/` references |
+| Which categories require stricter claim/legal review? | `docs/claim-risk-checklist.md` and category reference files |
+| Which platforms are actually used for ads, analytics, email, CRM, social, and CRO? | `tools/REGISTRY.md` and `tools/integrations/` |
+| Which deliverables should have first-class templates? | `outputs/_templates/` |
+| What is the preferred naming convention for brands, campaigns, files, UTMs, and creative variants? | `docs/where-to-put-references.md`, `tools/integrations/`, and brand intake files |
+| What should trigger a context usage log entry? | `logs/context-usage/README.md` |
+| What private or raw data must never be committed? | `SECURITY.md` and `tools/integrations/github.md` |
+| Which reusable visual references are licensed and approved for workspace use? | `shared-reference-library/README.md` and asset notes |
+| Which repeat workflows should become commands or checklists? | `skills/`, `docs/`, or future command docs |
+| Which learnings should become workspace-wide principles instead of brand-specific memory? | `logs/2nd-brain/cross-cutting-principles.md` |
+
 ## Bot Capability Inputs To Supply
 
 Use this as the master intake list for making the bot more useful, accurate, and execution-ready across brands. Store brand-specific files in `brands/[Brand]/`; store reusable references in `shared-reference-library/`; store final/shareable deliverables in `outputs/[Brand]/`.
@@ -32,7 +50,7 @@ Use this as the master intake list for making the bot more useful, accurate, and
 | Compact brand context index with confirmed facts, source paths, approved claims, legal rules, and open gaps | Fast loading before any task without rereading large files | `brands/[Brand]/context-index.md` | `[To be supplied]` |
 | Brand guidelines or brand book | Voice, identity, usage rules, messaging, visual rules, and design consistency | `brands/[Brand]/brand-guidelines/` or `brands/[Brand]/brand-book.md` | `[To be supplied]` |
 | Voice and copy rules with examples of approved and rejected wording | Reliable external-facing copy and reviews | `brands/[Brand]/brand-guidelines/` or `brands/[Brand]/reference-library/copy/` | `[To be supplied]` |
-| Product/SKU catalog with names, descriptions, variants, pricing, bundles, and availability | Accurate offers, pages, ads, emails, and content | `brands/[Brand]/brand-intake.md` or `brands/[Brand]/assets/product-data/` | `[To be supplied]` |
+| Product/SKU catalog with names, descriptions, variants, pricing, bundles, and availability | Accurate offers, pages, ads, emails, and content | `brands/[Brand]/brand-intake.md` or `assets/product-data/` | `[To be supplied]` |
 | Offer calendar with promo rules, dates, eligibility, exclusions, and approved wording | Prevents invented discounts, urgency, or terms | `brands/[Brand]/assets/offer-sources/` | `[To be supplied]` |
 | Legal/compliance rules and reviewer workflow | Required for claims, regulated categories, ad platforms, and approvals | `brands/[Brand]/assets/claims-sources/` or `brand-intake.md` | `[To be supplied]` |
 
@@ -44,7 +62,7 @@ Use this as the master intake list for making the bot more useful, accurate, and
 | Rejected visual references with reasons | Prevents repeated unwanted styles | `brands/[Brand]/reference-library/rejected/` | `[To be supplied]` |
 | Competitor/category screenshots and links with capture dates | Positioning, differentiation, category conventions, and claim comparison | `brands/[Brand]/reference-library/competitors/` | `[To be supplied]` |
 | Website, landing page, social, packaging, email, and ad examples | Channel-specific creative and layout decisions | Matching folders inside `brands/[Brand]/reference-library/` | `[To be supplied]` |
-| Font references and license proof | Typography choices and usage safety | `brands/[Brand]/reference-library/fonts/` | Supplied folder items confirmed licensed by Raunak; new external fonts still need proof |
+| Font references and license proof | Typography choices and usage safety | `brands/[Brand]/reference-library/fonts/` | `[To be supplied]` |
 | Color references and approved palette rules | Visual consistency and production-ready identity work | `brands/[Brand]/reference-library/colors/` | `[To be supplied]` |
 | Reusable cross-brand reference examples | Helps the bot build faster when references are not brand-specific | `shared-reference-library/` | `[To be supplied]` |
 
@@ -80,6 +98,8 @@ Use this as the master intake list for making the bot more useful, accurate, and
 | Email/SMS lifecycle metrics and flow maps | Retention, automation, and lifecycle improvements | `brands/[Brand]/assets/performance-data/` | `[To be supplied]` |
 | Creative test history with hypotheses, variants, spend, audience, dates, results, and learnings | Avoids repeating failed tests and speeds up iteration | `brands/[Brand]/assets/performance-data/` | `[To be supplied]` |
 | Source-of-truth KPI definitions and reporting cadence | Keeps performance recommendations consistent | `brands/[Brand]/brand-intake.md` or `assets/performance-data/` | `[To be supplied]` |
+| Seed learnings registry with confirmed wins, losses, audience insights, and creative patterns | Gives future campaign work memory instead of restarting from scratch | `brands/[Brand]/learnings-registry.md` | `[To be supplied]` |
+| Experiments backlog with active, queued, completed, and inconclusive tests | Prevents repeating weak tests and helps plan the next useful test | `brands/[Brand]/experiments-backlog.md` | `[To be supplied]` |
 
 ### Platform, Tool, And Execution Access
 
@@ -97,104 +117,30 @@ Use this as the master intake list for making the bot more useful, accurate, and
 |---|---|---|---|
 | Examples of best prior outputs and why they worked | Calibrates quality bar and format | `outputs/[Brand]/` or `brands/[Brand]/reference-library/examples/` | `[To be supplied]` |
 | Examples of bad or rejected outputs with reasons | Prevents repeated mistakes | `brands/[Brand]/reference-library/rejected/` | `[To be supplied]` |
-| Preferred deliverable templates for briefs, audits, brand books, ad sets, and email flows | Speeds up repeat work and improves consistency | `skills/[skill]/references/` or `outputs/[Brand]/` | `[To be supplied]` |
+| Preferred deliverable templates for briefs, audits, brand books, ad sets, and email flows | Speeds up repeat work and improves consistency | `skills/[skill]/references/` or `outputs/_templates/` | `[To be supplied]` |
 | QA checklists for claims, voice, creative, tracking, and launch readiness | Reduces review misses before external use | `docs/` or relevant `skills/[skill]/references/` | `[To be supplied]` |
 | Naming conventions for files, campaigns, UTMs, creative variants, and exports | Keeps workspace and platform outputs organized | `brands/[Brand]/brand-intake.md` and tool docs | `[To be supplied]` |
-
-## Spunge Brand Files
-
-| File | Missing Or Needs Update |
-|---|---|
-| `brands/Spunge/context-index.md` | Add any newly confirmed brand rules, campaign constraints, approved claims, and source paths |
-| `brands/Spunge/brand-intake.md` | Add final product/SKU details, offer, launch markets, pricing, channel priorities, and audience segments |
-| `brands/Spunge/brand-guidelines/brand-guidelines.md` | Replace remaining template placeholders with final positioning, audience, voice, messaging, proof points, and writing rules |
-| `brands/Spunge/reference-index.md` | Add approved/rejected references after visual reference files are supplied |
-| `brands/Spunge/moodboard-territories.md` | Score territories after references are added; add a third route if needed |
-| `brands/Spunge/brand-book.md` | Draft final brand book after moodboard direction, assets, fonts, and claim sources are confirmed |
-| `brands/Spunge/asset-checklist.md` | Add paths/status for every supplied asset and source |
-
-## Spunge Assets To Supply
-
-| Need | Target Location |
-|---|---|
-| Final logo source files | `brands/Spunge/assets/logos/` |
-| Final approved logo lockups | `brands/Spunge/assets/logos/` |
-| Product pack shots | `brands/Spunge/assets/product-photography/` |
-| Packaging source files | `brands/Spunge/assets/packaging/` |
-| Lifestyle photography | `brands/Spunge/assets/lifestyle-photography/` |
-| Social/ad/deck templates | `brands/Spunge/assets/templates/` |
-| Website or e-commerce banner templates | `brands/Spunge/assets/templates/` |
-| Final exports | `brands/Spunge/assets/exports/` |
-| Clinical validation source documents | `brands/Spunge/assets/claims-sources/` |
-| Patent/source references for proprietary technologies | `brands/Spunge/assets/claims-sources/` |
-| Customer reviews, testimonials, permissions, and case studies | `brands/Spunge/assets/proof/` |
-| Audience research, survey results, interviews, support tickets, or sales notes | `brands/Spunge/assets/customer-research/` |
-| Performance exports, analytics reports, creative test history, and campaign results | `brands/Spunge/assets/performance-data/` |
-| Offer, pricing, discount, guarantee, refund, and terms source documents | `brands/Spunge/assets/legal/` or `brands/Spunge/assets/offer-sources/` |
-| Print/vendor production specs | `brands/Spunge/assets/packaging/` or `brands/Spunge/assets/claims-sources/` if claim-related |
-
-## Spunge References To Supply
-
-| Need | Target Location |
-|---|---|
-| Approved visual references | `brands/Spunge/reference-library/approved/` |
-| Rejected visual references | `brands/Spunge/reference-library/rejected/` |
-| Font references and license notes | `brands/Spunge/reference-library/fonts/` |
-| Color references | `brands/Spunge/reference-library/colors/` |
-| Style direction references | `brands/Spunge/reference-library/styles/` |
-| Photography references | `brands/Spunge/reference-library/photography/` |
-| Illustration references | `brands/Spunge/reference-library/illustration/` |
-| Packaging references | `brands/Spunge/reference-library/packaging/` |
-| Website references | `brands/Spunge/reference-library/websites/` |
-| Social references | `brands/Spunge/reference-library/social/` |
-| Generic competitor/category screenshots | `brands/Spunge/reference-library/competitors/` |
-| Approved copy examples | `brands/Spunge/reference-library/copy/` |
-| Rejected copy or creative examples with reasons | `brands/Spunge/reference-library/rejected/` |
-| Best prior outputs or reusable examples | `brands/Spunge/reference-library/examples/` |
-
-## Spunge Facts To Confirm
-
-| Information | Status |
-|---|---|
-| Final product/SKU list | `[To be supplied]` |
-| Final offer and pricing | `[To be supplied]` |
-| Launch geography and language requirements | `[To be supplied]` |
-| Approved claim wording | Partial |
-| Required claim footnotes | Partial |
-| Clinical/statistical source documents | `[To be supplied]` |
-| Font license proof for Alfabet | Confirmed by Raunak |
-| Font license proof for Sofia Sans Condensed | Confirmed by Raunak if present in supplied asset/reference folders |
-| Landing page URL | `[To be supplied]` |
-| UTM naming rules | `[To be supplied]` |
-| Meta/Google/LinkedIn ad account IDs | `[To be supplied]` |
-| GA4 property and conversion events | `[To be supplied]` |
-| E-commerce/channel requirements | `[To be supplied]` |
-| Legal/compliance reviewer or approval process | `[To be supplied]` |
-| Target customer segments and priority objections | `[To be supplied]` |
-| Voice-of-customer source files | `[To be supplied]` |
-| Approved testimonials/reviews and usage permissions | `[To be supplied]` |
-| Current baseline KPIs and reporting cadence | `[To be supplied]` |
-| Creative testing history and learnings | `[To be supplied]` |
-| Platform naming conventions for campaigns, ad sets, ads, audiences, emails, and UTMs | `[To be supplied]` |
-| Approval owners, turnaround time, and final sign-off workflow | `[To be supplied]` |
 
 ## Skills, Agents, And Tools To Consider Upgrading
 
 | Area | Suggested Upgrade |
 |---|---|
-| `agents/visual-identity-director.md` | Add a Spunge-specific reminder to check absorption, claims, font license, and Dark Cyan rules only when working on Spunge |
-| `skills/visual-identity-system/references/` | Add a packaging-ready checklist if packaging becomes a frequent deliverable |
-| `skills/paid-media/references/` | Add nutraceutical/health-claim safety checklist after legal claim rules are confirmed |
-| `skills/copy-system/references/` | Add an absorption-awareness copy pattern after more Spunge campaigns are approved |
-| `tools/integrations/meta-ads.md` | Add Spunge ad account, pixel, event, naming, and UTM rules when supplied |
-| `tools/integrations/ga4.md` | Add Spunge conversion events and reporting views when supplied |
+| `brands/_template/` | Add optional subfolders for copy examples, customer research, offer sources, legal, and performance data |
+| `agents/` | Add stronger "ask fewer, better questions" behavior to agents that often receive incomplete briefs |
+| `skills/visual-identity-system/` | Add packaging-ready and digital-ready QA checklists if those deliverables are frequent |
+| `skills/copy-system/` | Add claim-safe rewrite patterns by category after examples are approved |
+| `skills/paid-media/` | Add channel-specific naming, UTM, and launch QA templates |
+| `skills/conversion-system/` | Add page audit scoring rubric and experiment backlog template |
+| `tools/integrations/` | Add only platforms that are actively used and have setup details |
+| `outputs/_templates/` | Add stronger final deliverable templates with readiness notes and source-risk sections |
+| `skills/second-brain/` | Refine observation rules after several real performance reviews or learning updates |
 
 ## Maintenance Rule
 
 After each substantial project, ask:
 
 ```text
-What did we learn that should update a brand file, agent, skill, or tool?
+What did we learn that should update a brand file, agent, skill, tool, template, or doc?
 Only make reusable updates.
 Use [To be supplied] for missing evidence.
 ```

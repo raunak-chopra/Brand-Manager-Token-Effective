@@ -30,6 +30,7 @@ Do not load `old agents - DO NOT EDIT/` during normal chats. It is a full-detail
 | Personas, ICPs, customer discovery, guided intake | `persona-builder` | `customer-insight` | The task needs progressive questions or a customer profile built from incomplete inputs. |
 | Plans, calendars, timelines, budgets, campaign operations | `planner` | `content-system`, `paid-media`, or `brand-strategy` | The task requires sequencing, resource allocation, timelines, or channel mix. |
 | Market, customer, competitor, and source-backed research | `researcher` | `customer-insight` or `brand-strategy` | The task requires evidence gathering, synthesis, or source risk control. |
+| Performance reports, campaign reviews, learning extraction | `researcher` | `conversion-system` or `second-brain` | The task needs evidence-backed performance interpretation or reusable learnings. |
 | Visual direction, moodboards, identity systems, brand books | `visual-identity-director` | `visual-identity-system` | The task turns strategy and references into visual systems or brand-book guidance. |
 
 ## Tie Breakers
@@ -38,6 +39,7 @@ Do not load `old agents - DO NOT EDIT/` during normal chats. It is a full-detail
 - If the user asks for strategy and a calendar, use `planner`.
 - If the user asks for ideas before execution, use `brainstormer`.
 - If the user asks for evidence, market facts, competitors, or sources, use `researcher`.
+- If the user asks what to remember, what worked, or what should improve the workspace, use `researcher` with `second-brain`.
 - If the user asks for emails, use `email-wizard` even when copy is involved.
 - If the user asks for final copy and the strategy is already clear, use `copywriter`.
 

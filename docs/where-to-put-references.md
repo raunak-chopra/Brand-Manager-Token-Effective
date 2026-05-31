@@ -99,7 +99,7 @@ shared-reference-library/tools-and-prompts/envato-asset-library-guide.md
 
 Use the Envato catalog for templates, mockups, fonts, packaging assets, UI kits, themes, deck layouts, and visual inspiration. Do not copy the full external library into this repository. Search the catalog first, then copy only selected assets into the active brand or project workspace before editing.
 
-Raunak has confirmed that items in the available asset/reference folders have proper licenses, including Alfabet font and other supplied items. Treat them as licensed for workspace use, but do not invent specific license terms, redistribution rights, exclusivity, trademark clearances, or third-party usage permissions.
+Treat supplied asset/reference folders as available only when license proof or usage approval has been supplied. Do not invent specific license terms, redistribution rights, exclusivity, trademark clearances, or third-party usage permissions.
 
 Brand-specific context, guidelines, assets, and approved/rejected rules still override Envato references.
 
@@ -138,7 +138,7 @@ Do not ask the bot to read every reference by default.
 Best prompt:
 
 ```text
-Use `brands/Spunge/context-index.md` first.
+Use `brands/[Brand]/context-index.md` first.
 Then list the relevant reference folder.
 Only open files needed for this task.
 If a relevant brand or shared reference folder is empty, skip it after the quick folder check and use the next priority source.

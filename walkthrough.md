@@ -1,23 +1,27 @@
-# Marketing Bot Walkthrough
+# Brand Manager Bot Walkthrough
 
-This workspace is a lightweight AI marketing operating system. It is built around brand folders, specialist agents, reusable skills, platform tools, and an `outputs/` folder for deliverables.
+This workspace is a lightweight AI brand and marketing operating system. It is built around brand folders, specialist agents, reusable skills, platform tools, 2nd Brain learning files, and an `outputs/` folder for deliverables.
 
 ## 1. Brand Folders
 
 Brand-specific work belongs in `brands/[Brand]/`.
 
-For Spunge, start with:
+For a brand task, start with:
 
 ```text
-brands/Spunge/context-index.md
+brands/[Brand]/context-index.md
 ```
 
 Then load only what the task needs:
 
 - `brand-intake.md` for missing context
+- `learnings-registry.md` for confirmed campaign, creative, audience, offer, and channel learnings
+- `experiments-backlog.md` for active, queued, completed, or inconclusive tests
 - `brands/[Brand]/brand-guidelines/brand-guidelines.md` for rules
 - `reference-library/` for selected visual examples
 - `assets/` for production files and proof
+
+For a new brand, copy `brands/_template/` to `brands/[Brand]/` first, then fill the highest-priority intake gaps.
 
 ## 2. Agents
 
@@ -46,7 +50,7 @@ Examples:
 - `paid-media` for campaign structure and ad copy
 - `conversion-system` for landing page audits
 - `email-lifecycle` for drip workflows
-- `conversion-system` for tracking and reporting
+- `content-system` for calendars and distribution
 
 Open `SKILL.md` first. Open `references/` only when you need templates, specs, examples, or benchmarks.
 
@@ -71,14 +75,14 @@ Use `outputs/[Brand]/` for final or shareable deliverables. Keep source-of-truth
 Example:
 
 ```text
-outputs/Spunge/2026-05-12-meta-awareness-ad-copy.md
+outputs/[Brand]/2026-05-12-meta-awareness-ad-copy.md
 ```
 
 ## 6. Best Prompt Pattern
 
 ```text
-Brand: Spunge
-First read: brands/Spunge/context-index.md
+Brand: [Brand Name]
+First read: brands/[Brand Name]/context-index.md
 Agent: agents/[agent].md
 Skill: skills/[skill]/SKILL.md
 
@@ -97,12 +101,16 @@ When agent or skill choice is unclear, read `agents/ROUTER.md` or `skills/ROUTER
 After a project, improve the workspace only when the learning is reusable:
 
 - Brand fact -> brand context or intake
+- Brand learning -> `brands/[Brand]/learnings-registry.md`
+- Experiment or test idea -> `brands/[Brand]/experiments-backlog.md`
 - Missing source/asset -> asset checklist or `missing-inputs.md`
 - Repeatable method -> skill file
 - Role behavior -> agent file
 - Platform setup -> tool integration doc
 
 Do not turn assumptions or one-off preferences into permanent rules.
+
+Use `skills/second-brain/SKILL.md` for retrospectives, performance reviews, learning extraction, and skill/template improvement. Confirmed learnings need evidence or user confirmation; unsupported learnings stay proposed or `[To be supplied]`.
 
 ## Useful Files
 

@@ -18,6 +18,14 @@ Use this before substantial brand, campaign, creative, email, CRO, or visual ide
 | Legal or compliance rules | Claims, regulated categories, external copy | `[To be supplied]` |
 | Rejected styles | Visual identity, voice, creative review | `[To be supplied]` |
 | Reference folders | Moodboards, visual identity, creative direction | `[To be supplied]` |
+| Primary conversion event | Paid media, CRO, analytics, reporting | `[To be supplied]` |
+| Target CAC/CPA or ROAS | Paid media and performance recommendations | `[To be supplied]` |
+| Ad budget | Paid media planning and test sizing | `[To be supplied]` |
+| Tracking/pixel status | Paid media, CRO, analytics, reporting | `[To be supplied]` |
+| Active channels | Campaign planning, reporting, creative reuse | `[To be supplied]` |
+| Current offer | Ads, email, landing pages, CRO | `[To be supplied]` |
+| Learnings registry | Creative, campaign, and performance decisions | `[To be supplied]` |
+| Experiments backlog | CRO, ad variants, test planning | `[To be supplied]` |
 
 ## Readiness Levels
 
@@ -37,6 +45,8 @@ Use this before substantial brand, campaign, creative, email, CRO, or visual ide
 | Email lifecycle | Audience, lifecycle stage, trigger, goal, offer/product moment, compliance rules. |
 | Social content | Audience, platforms, goal, voice, source assets, cadence. |
 | CRO | Page URL/copy/screenshot, conversion event, audience, traffic source, proof, current metrics. |
+| Performance reporting | Platform, date range, spend/revenue or leads, conversion event, tracking status, targets, source export or summary. |
+| Learning update | Evidence source, confidence level, destination file, and whether learning is confirmed, proposed, or directional. |
 
 ## Output Rule
 

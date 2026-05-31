@@ -1,7 +1,7 @@
 # Brand Guidelines
 
-The Spunge brand guidelines have been moved to the brand-specific canonical path:
+Keep brand-specific guidelines in the relevant brand folder:
 
-`brands/Spunge/brand-guidelines/brand-guidelines.md`
+`brands/[Brand Name]/brand-guidelines/brand-guidelines.md`
 
-Use the brand-specific file for all Spunge work. Keep root-level `brands/` files generic only.
+Keep root-level `brands/` files generic only. Use `brands/_template/` to start a new brand folder.

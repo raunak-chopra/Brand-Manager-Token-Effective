@@ -41,7 +41,7 @@ Platform-specific tactics for each marketing channel.
 | Priority | Action | Agent |
 |----------|--------|-------|
 | 1 | Keyword research | `attraction-specialist` |
-| 2 | On-page optimization | `seo-specialist` |
+| 2 | On-page optimization | `attraction-specialist` |
 | 3 | Content creation | `copywriter` |
 | 4 | Link building | `attraction-specialist` |
 
@@ -252,9 +252,9 @@ utm_term: keyword (for paid search)
 
 | Channel | Primary Agent | Supporting |
 |---------|---------------|------------|
-| SEO/Content | `attraction-specialist` | copywriter, seo-specialist |
+| SEO/Content | `attraction-specialist` | copywriter, researcher |
 | Email | `email-wizard` | copywriter |
-| Social | `copywriter` | continuity-specialist |
+| Social | `copywriter` | email-wizard |
 | Paid | `attraction-specialist` | researcher |
 
 ---

@@ -42,3 +42,15 @@
 - [ ] Font licenses are confirmed
 - [ ] Legal / claims rules are confirmed
 - [ ] Print/vendor constraints are confirmed
+
+## Performance Marketing Setup
+
+- [ ] Primary conversion event is defined
+- [ ] Pixels/tags are installed or marked `[To be supplied]`
+- [ ] Conversion events are configured or marked `[To be supplied]`
+- [ ] UTM conventions are documented
+- [ ] Ad accounts and owners are documented
+- [ ] Analytics source of truth is documented
+- [ ] Email/SMS platform and active flows are documented
+- [ ] Attribution limitations are documented
+- [ ] Current performance baseline is supplied or marked `[To be supplied]`

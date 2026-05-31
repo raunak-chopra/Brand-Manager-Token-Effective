@@ -306,7 +306,7 @@ Preview: [Extends curiosity]
 | Task | Agent | Notes |
 |------|-------|-------|
 | Content creation | `copywriter` | Apply all standards |
-| SEO optimization | `seo-specialist` | Keyword integration |
+| SEO optimization | `attraction-specialist` | Keyword integration |
 | Quality review | `brand-voice-guardian` | Voice consistency |
 | CRO review | `conversion-optimizer` | CTA effectiveness |
 

@@ -283,8 +283,8 @@ utm_term: keyword (for paid search only)
 | Task | Agent | Notes |
 |------|-------|-------|
 | Performance analysis | `researcher` | Regular reporting |
-| Attribution review | `lead-qualifier` | Lead journey |
-| Dashboard creation | `project-manager` | Report templates |
+| Attribution review | `conversion-optimizer` | Lead journey |
+| Dashboard creation | `planner` | Report templates |
 | Tracking implementation | Manual | Technical setup |
 
 ---
