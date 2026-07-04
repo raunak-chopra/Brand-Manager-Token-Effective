@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI faceless tactical backdrop</title>
+  <desc id="desc">Faceless video backdrop for fantasy football screen recordings and tactical analysis.</desc>
+  <rect width="1920" height="1080" fill="#07111F"/>
+  <rect x="52" y="52" width="1816" height="976" rx="18" fill="#091826" stroke="#273142" stroke-width="4"/>
+  <g opacity=".22" stroke="#F7F7F2" stroke-width="3" fill="none">
+    <path d="M150 170h1130v740H150z"/>
+    <path d="M715 170v740"/>
+    <circle cx="715" cy="540" r="112"/>
+    <path d="M150 360h160v360H150M1280 360h-160v360h160"/>
+  </g>
+  <rect x="1350" y="170" width="420" height="740" rx="16" fill="#0D2232" stroke="#273142" stroke-width="4"/>
+  <text x="1390" y="238" font-family="Bigstage, Impact, Arial Black, sans-serif" font-size="56" fill="#F7F7F2">DEADLINE XI</text>
+  <text x="1392" y="284" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#12B76A">PAPA RANJEET LIVE BOARD</text>
+  <g>
+    <rect x="1390" y="350" width="144" height="52" rx="8" fill="#12B76A"/>
+    <rect x="1550" y="350" width="150" height="52" rx="8" fill="#F5B841"/>
+    <rect x="1390" y="426" width="144" height="52" rx="8" fill="#273142"/>
+    <rect x="1550" y="426" width="150" height="52" rx="8" fill="#EF4444"/>
+    <text x="1462" y="386" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#07111F">LOCK</text>
+    <text x="1625" y="386" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#07111F">PUNT</text>
+    <text x="1462" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#F7F7F2">WATCH</text>
+    <text x="1625" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#F7F7F2">AVOID</text>
+  </g>
+  <g stroke="#12B76A" stroke-width="4" fill="none" opacity=".6">
+    <path d="M280 294 492 404 705 330 920 552 1110 418"/>
+    <path d="M336 804 574 692 816 760 1018 652"/>
+  </g>
+  <circle cx="280" cy="294" r="10" fill="#12B76A"/><circle cx="705" cy="330" r="10" fill="#12B76A"/><circle cx="920" cy="552" r="10" fill="#12B76A"/><circle cx="1018" cy="652" r="10" fill="#12B76A"/>
+  <text x="92" y="998" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="900" fill="#F7F7F2">Aaj ka call: naam nahi, minutes dekho.</text>
+</svg>

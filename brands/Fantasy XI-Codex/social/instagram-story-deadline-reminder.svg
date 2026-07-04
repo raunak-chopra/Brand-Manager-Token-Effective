@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">Instagram deadline reminder story</title>
+  <desc id="desc">Instagram story source for fantasy football deadline reminder.</desc>
+  <rect width="1080" height="1920" fill="#07111F"/>
+  <rect x="64" y="80" width="952" height="1760" rx="36" fill="#091826" stroke="#273142" stroke-width="6"/>
+  <text x="540" y="248" text-anchor="middle" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="108" fill="#F7F7F2">DEADLINE XI</text>
+  <rect x="198" y="316" width="684" height="78" rx="12" fill="#12B76A"/>
+  <text x="540" y="370" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="38" font-weight="900" fill="#07111F">PAPA RANJEET REMINDER</text>
+  <text x="540" y="710" text-anchor="middle" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="150" fill="#F5B841">LOCK</text>
+  <text x="540" y="858" text-anchor="middle" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="140" fill="#F7F7F2">BEFORE</text>
+  <text x="540" y="1008" text-anchor="middle" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="150" fill="#EF4444">DEADLINE</text>
+  <rect x="150" y="1160" width="780" height="190" rx="20" fill="#0D2232"/>
+  <text x="540" y="1236" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#F7F7F2">Apna captain check kar lo.</text>
+  <text x="540" y="1304" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#12B76A">Naam nahi, minutes dekho.</text>
+  <rect x="220" y="1540" width="640" height="96" rx="18" fill="#F5B841"/>
+  <text x="540" y="1604" text-anchor="middle" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#07111F">SEND YOUR DRAFT</text>
+</svg>

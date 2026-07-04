@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI player stat card</title>
+  <desc id="desc">Premium FUT-style player card template for fantasy football picks.</desc>
+  <rect width="900" height="1180" fill="#07111F"/>
+  
+  <!-- Subtle Background Pitch Grid -->
+  <path d="M100 56h700l44 44v980l-44 44H100l-44-44V100L100 56Z" fill="#091826" stroke="#273142" stroke-width="6"/>
+  <line x1="56" y1="590" x2="844" y2="590" stroke="#273142" stroke-width="4" opacity="0.18"/>
+  <circle cx="450" cy="590" r="180" fill="none" stroke="#273142" stroke-width="4" opacity="0.18"/>
+  
+  <!-- Status Badge (e.g., LOCK / PUNT) -->
+  <path d="M92 92h200l25 36-25 36H92l-15-36Z" fill="#12B76A"/>
+  <text x="182" y="140" text-anchor="middle" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="34" font-weight="900" fill="#07111F">LOCK</text>
+  
+  <!-- Player Name & Team -->
+  <text x="92" y="270" font-family="WORLD-Condensed, Bigstage, Impact, sans-serif" font-size="82" fill="#F7F7F2">PLAYER NAME</text>
+  <text x="96" y="326" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#F5B841">TEAM / POSITION</text>
+  
+  <!-- Player Avatar Frame -->
+  <circle cx="690" cy="240" r="105" fill="#0D2232" stroke="#12B76A" stroke-width="6"/>
+  <!-- Inner shirt outline vector for avatar placeholder -->
+  <path d="M635 320c10-25 25-45 55-45s45 20 55 45v15h-110v-15Z" fill="#273142"/>
+  <circle cx="690" cy="220" r="40" fill="#273142"/>
+  
+  <!-- Stat/Metrics Panel -->
+  <rect x="92" y="400" width="716" height="210" rx="18" fill="#0D2232" stroke="#273142" stroke-width="3"/>
+  <line x1="450" y1="420" x2="450" y2="590" stroke="#273142" stroke-width="3"/>
+  
+  <!-- Price Stat -->
+  <text x="132" y="465" font-family="Manuver, Arial, sans-serif" font-size="28" font-weight="800" fill="#F7F7F2" opacity="0.7">PRICE</text>
+  <text x="132" y="555" font-family="Inter-Soccer, Courier New, monospace" font-size="68" font-weight="900" fill="#12B76A">[TBS]</text>
+  
+  <!-- Fixture Stat -->
+  <text x="490" y="465" font-family="Manuver, Arial, sans-serif" font-size="28" font-weight="800" fill="#F7F7F2" opacity="0.7">FIXTURE</text>
+  <text x="490" y="555" font-family="Inter-Soccer, Courier New, monospace" font-size="68" font-weight="900" fill="#F5B841">[TBS]</text>
+  
+  <!-- Papa Ranjeet Call Section -->
+  <text x="92" y="700" font-family="WORLD-Condensed, Bigstage, sans-serif" font-size="44" fill="#F7F7F2">PAPA RANJEET CALL</text>
+  <text x="92" y="765" font-family="Manuver, Arial, sans-serif" font-size="34" font-weight="800" fill="#12B76A">Tension-free pick hai, lock kar do.</text>
+  
+  <!-- Analysis Box -->
+  <rect x="92" y="860" width="716" height="190" rx="18" fill="#111C2D" stroke="#273142" stroke-width="4"/>
+  <text x="132" y="924" font-family="Manuver, Arial, sans-serif" font-size="28" font-weight="800" fill="#F7F7F2">Reason: minutes + role + fixture</text>
+  <text x="132" y="990" font-family="Manuver, Arial, sans-serif" font-size="28" font-weight="800" fill="#F7F7F2">Risk: [To be supplied]</text>
+</svg>

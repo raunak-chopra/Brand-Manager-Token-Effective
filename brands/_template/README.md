@@ -1,20 +1,27 @@
 # New Brand Template
 
-Duplicate this folder and rename it to the brand name.
+Copy this folder to `brands/[Brand Name]/`.
 
-Use this order:
+## Fast Start
 
-1. Fill `brand-intake.md`.
-2. Add visual references into `reference-library/`.
-3. Fill `reference-index.md` while auditing references.
-4. Add confirmed learnings to `learnings-registry.md` only when evidence exists.
-5. Add active, queued, or completed tests to `experiments-backlog.md`.
-6. Draft 2-3 routes in `moodboard-territories.md`.
-7. Finalize the system in `brand-book.md`.
-8. Check readiness with `asset-checklist.md`.
+1. Fill `context-index.md` with the smallest useful summary.
+2. Fill only required sections of `brand-intake.md`.
+3. Add references to `reference-library/` and summarize them in `reference-index.md`.
+4. Put confirmed learnings in `learnings-registry.md`.
+5. Put tests in `experiments-backlog.md`.
+6. Track assets in `asset-inventory.md` and reusable prompts in `prompt-library.md`.
+7. Use `memory-graph/index.md` as the compact pointer to learnings, tests, claims, decisions, assets, campaigns, and open questions.
 
-Keep this folder clean. If a file is not useful for future brand work, do not keep it.
+## First-Read Files
 
-## Learning Rule
+- `context-index.md` - compact brand snapshot and load map.
+- `memory-graph/index.md` - source-linked summary of reusable memory.
+- `claim-registry.md` - proof and usage limits for marketing claims.
+- `decision-log.md` - settled decisions that should prevent repeated rework.
+- `brand-readiness-score.md` - compact completion checklist.
 
-As the brand develops, update the brand files with confirmed decisions. Add reusable workflows to `skills/`, specialist behavior to `agents/`, and platform execution notes to `tools/`. Do not store assumptions as facts.
+Keep these compact. Put detailed strategy, copy, visuals, and campaign work in the specific source files they point to.
+
+## Rule
+
+Do not store assumptions as facts. Use `[To be supplied]` until the user or a source confirms the detail.

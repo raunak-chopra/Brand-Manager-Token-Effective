@@ -21,6 +21,8 @@ Read this file first when a task involves a marketing platform. Then open only t
 | `optimizely` | A/B testing | `tools/integrations/optimizely.md` | `tools/clis/optimizely.js` |
 | `buffer` | Social scheduling | `tools/integrations/buffer.md` | `[To be supplied]` |
 | `github` | Version control / publishing | `tools/integrations/github.md` | `[To be supplied]` |
+| `mcp-setup` | Integration | `tools/integrations/mcp-setup.md` | - |
+| `validate-findings` | Local validation | `logs/hygiene/README.md` | `tools/clis/validate-findings.js` |
 
 ## Category Guidance
 
@@ -28,10 +30,10 @@ Read this file first when a task involves a marketing platform. Then open only t
 
 Paid advertising platforms and campaign management.
 
-| Tool | Best For | MCP Available |
+| Tool | Best For | Live Setup Status |
 |---|---|:---:|
-| `google-ads` | Search intent and high-intent traffic | `[To be supplied]` |
-| `meta-ads` | Demand generation, visual products, B2C awareness and conversion | `[To be supplied]` |
+| `google-ads` | Search intent and high-intent traffic | User-supplied setup |
+| `meta-ads` | Demand generation, visual products, B2C awareness and conversion | User-supplied setup |
 | `linkedin-ads` | B2B campaigns where role, company, or industry targeting matters | `[To be supplied]` |
 
 Agent recommendation: use Google Ads for search intent, Meta for demand generation, and LinkedIn for B2B targeting.

@@ -1,0 +1,1190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fantasy XI Interactive Brand Guidelines & Assets Playbook - Managed by Papa Ranjeet">
+    <title>Fantasy XI | Interactive Brand Guidelines</title>
+    
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Custom Properties / Design Tokens */
+        :root {
+            --bg-color: #07111F;
+            --bg-card: rgba(39, 49, 66, 0.4);
+            --bg-card-hover: rgba(39, 49, 66, 0.6);
+            --primary-green: #12B76A;
+            --primary-green-glow: rgba(18, 183, 106, 0.2);
+            --accent-amber: #F5B841;
+            --accent-amber-glow: rgba(245, 184, 65, 0.2);
+            --risk-red: #EF4444;
+            --risk-red-glow: rgba(239, 68, 68, 0.2);
+            --text-white: #F7F7F2;
+            --text-gray: #8A99AD;
+            --slate-border: rgba(255, 255, 255, 0.08);
+            --slate-dark: #0A1627;
+            
+            --font-header: 'Anton', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            
+            --transition-speed: 0.3s;
+        }
+
+        /* Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--slate-border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-green);
+        }
+
+        /* Glassmorphism Sidebar */
+        aside {
+            width: 280px;
+            background: linear-gradient(180deg, var(--slate-dark) 0%, var(--bg-color) 100%);
+            border-right: 1px solid var(--slate-border);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 2rem 1.5rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .logo-area svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .logo-text {
+            font-family: var(--font-header);
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            color: var(--text-white);
+            text-shadow: 0 0 10px var(--primary-green-glow);
+        }
+        
+        .logo-sub {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--primary-green);
+            display: block;
+            margin-top: -0.2rem;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex-grow: 1;
+        }
+
+        .nav-btn {
+            background: none;
+            border: 1px solid transparent;
+            color: var(--text-gray);
+            padding: 0.9rem 1.2rem;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-white);
+            background-color: var(--bg-card);
+            border-color: var(--slate-border);
+        }
+
+        .nav-btn.active {
+            color: var(--text-white);
+            background: linear-gradient(90deg, var(--primary-green-glow) 0%, transparent 100%);
+            border-left: 3px solid var(--primary-green);
+            padding-left: calc(1.2rem - 3px);
+        }
+
+        .sidebar-footer {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            border-top: 1px solid var(--slate-border);
+            padding-top: 1.5rem;
+            margin-top: auto;
+        }
+
+        .sidebar-footer span {
+            color: var(--accent-amber);
+            font-weight: bold;
+        }
+
+        /* Main Content Container */
+        main {
+            margin-left: 280px;
+            flex-grow: 1;
+            padding: 3rem 4rem;
+            max-width: 1200px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography Utilities */
+        h1 {
+            font-family: var(--font-header);
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            color: var(--text-white);
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: var(--font-header);
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--slate-border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .subtitle {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            color: var(--accent-amber);
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        strong {
+            color: var(--text-white);
+        }
+
+        /* Card Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--slate-border);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .card:hover {
+            border-color: rgba(18, 183, 106, 0.4);
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(18, 183, 106, 0.05);
+        }
+
+        .card-accent {
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .card-accent-amber {
+            border-left: 4px solid var(--accent-amber);
+        }
+
+        .card-accent-red {
+            border-left: 4px solid var(--risk-red);
+        }
+
+        /* Label Badges */
+        .badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .badge-green { background-color: var(--primary-green-glow); color: var(--primary-green); border: 1px solid var(--primary-green); }
+        .badge-amber { background-color: var(--accent-amber-glow); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+        .badge-red { background-color: var(--risk-red-glow); color: var(--risk-red); border: 1px solid var(--risk-red); }
+
+        /* Color Swatches Grid */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-card {
+            background: var(--bg-card);
+            border: 1px solid var(--slate-border);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .color-card:hover {
+            transform: scale(1.03);
+            border-color: var(--text-white);
+        }
+
+        .color-block {
+            height: 100px;
+            width: 100%;
+            margin-bottom: 0.8rem;
+        }
+
+        .color-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-white);
+        }
+
+        .color-hex {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* Typography Sandbox */
+        .font-sandbox {
+            background: var(--slate-dark);
+            border: 1px solid var(--slate-border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sandbox-row {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--slate-border);
+            padding: 1.5rem 0;
+        }
+
+        .sandbox-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .sandbox-meta {
+            width: 200px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--primary-green);
+        }
+
+        .sandbox-text {
+            flex-grow: 1;
+        }
+
+        /* Vector Previews */
+        .vector-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .vector-card {
+            background: var(--bg-card);
+            border: 1px solid var(--slate-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vector-display {
+            background: var(--slate-dark);
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vector-display.backdrop-grid {
+            background-image: 
+                radial-gradient(var(--slate-border) 1px, transparent 0),
+                radial-gradient(var(--slate-border) 1px, transparent 0);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .vector-title {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-top: 0.5rem;
+        }
+
+        .vector-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+        }
+
+        /* Content Calendar Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--slate-border);
+        }
+
+        th {
+            background-color: var(--slate-dark);
+            font-family: var(--font-header);
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            color: var(--primary-green);
+        }
+
+        tr:hover td {
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        /* Code Block Copy Playbook */
+        .script-block {
+            background-color: var(--slate-dark);
+            border: 1px solid var(--slate-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            position: relative;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-amber);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--slate-border);
+            color: var(--text-gray);
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .copy-btn:hover {
+            color: var(--text-white);
+            border-color: var(--primary-green);
+            background-color: var(--primary-green-glow);
+        }
+
+        /* Envato Sourced Assets List */
+        .envato-asset-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--slate-border);
+        }
+        .envato-asset-row:last-child {
+            border-bottom: none;
+        }
+        
+        .envato-asset-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .envato-icon-badge {
+            background-color: #2DCA73;
+            color: white;
+            font-weight: bold;
+            font-size: 0.65rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-green);
+            color: var(--slate-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(18, 183, 106, 0.4);
+            display: none;
+            z-index: 1000;
+            animation: slideUp 0.3s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            aside {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--slate-border);
+                padding: 1.5rem;
+            }
+            .logo-area {
+                margin-bottom: 1.5rem;
+            }
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            body {
+                flex-direction: column;
+            }
+            main {
+                margin-left: 0;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Brand Navigator -->
+    <aside>
+        <div class="logo-area">
+            <!-- Mini Shield SVG Logo -->
+            <svg viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#12B76A" />
+                        <stop offset="100%" stop-color="#0A1627" />
+                    </linearGradient>
+                </defs>
+                <polygon points="50,5 90,25 90,65 50,95 10,65 10,25" fill="url(#shieldGrad)" stroke="#12B76A" stroke-width="4"/>
+                <text x="50" y="60" font-family="'Anton', sans-serif" font-size="36" fill="#F7F7F2" text-anchor="middle">XI</text>
+            </svg>
+            <div>
+                <span class="logo-text">XI-AG</span>
+                <span class="logo-sub">PAPA RANJEET BRAND</span>
+            </div>
+        </div>
+        
+        <nav>
+            <button class="nav-btn active" onclick="showSection('section-core')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                Core Strategy
+            </button>
+            <button class="nav-btn" onclick="showSection('section-persona')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Papa Ranjeet Voice
+            </button>
+            <button class="nav-btn" onclick="showSection('section-visuals')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Visual System
+            </button>
+            <button class="nav-btn" onclick="showSection('section-envato')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                Envato Reworks
+            </button>
+            <button class="nav-btn" onclick="showSection('section-playbook')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Content Playbook
+            </button>
+            <button class="nav-btn" onclick="showSection('section-renders')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Live SVG Mockups
+            </button>
+        </nav>
+        
+        <div class="sidebar-footer">
+            Status: <span>Review-Ready</span><br>
+            Tournament: World Cup '26
+        </div>
+    </aside>
+
+    <!-- Content Workspace -->
+    <main>
+        
+        <!-- SECTION 1: Core Strategy -->
+        <div id="section-core" class="content-section active">
+            <h1>Core Strategy</h1>
+            <p class="subtitle">Fantasy XI Positioning & Snapshot</p>
+            
+            <div class="grid-2">
+                <div class="card card-accent">
+                    <span class="badge badge-green">The Positioning Statement</span>
+                    <h3>Deadline-Ready Team Selection</h3>
+                    <p>For fantasy football managers who do not have hours to follow press conferences, injury lists, and squad rotation updates, <strong>Fantasy XI</strong> is a digital content lab that turns information overload into simple daily XI decisions. Unlike noisy, hype-filled betting tip channels, we make selections calm, practical, and highly transparent.</p>
+                </div>
+                
+                <div class="card card-accent-amber">
+                    <span class="badge badge-amber">The Onliness Statement</span>
+                    <h3>What Sets Us Apart</h3>
+                    <p>Fantasy XI is the <strong>only</strong> fantasy football advisory network that turns squad chaos into simple, daily transfer and captain decisions in conversational Hinglish for time-poor Indian managers.</p>
+                </div>
+            </div>
+            
+            <h2>Brand Snapshot</h2>
+            <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2.5rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Value / Setting</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Brand Name</strong></td>
+                            <td>Fantasy XI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Category</strong></td>
+                            <td>Fantasy Football Content Channel (Instagram Reels, Stories & YouTube Shorts, Long-form)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Core Audience</strong></td>
+                            <td>Indian and global football fans playing rolling tournament fantasy apps</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brand Promise</strong></td>
+                            <td>Daily deadline-ready transfers and captain calls without spreadsheet noise</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desired Perception</strong></td>
+                            <td>Sharp, accountable, friendly, and practical (The elder brother/Bada Bhai advisor)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Active Touchpoints</strong></td>
+                            <td>Instagram (@fantasyxi), YouTube (Fantasy XI Channel)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>First Campaign</strong></td>
+                            <td>FIFA World Cup 2026 Fantasy Launch</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 2: Persona -->
+        <div id="section-persona" class="content-section">
+            <h1>Papa Ranjeet Voice</h1>
+            <p class="subtitle">The Persona, Character, and Presentation Guidelines</p>
+            
+            <div class="grid-3">
+                <div class="card card-accent">
+                    <span class="badge badge-green">60% Bada Bhai</span>
+                    <h3>Big Brother Analyst</h3>
+                    <p>Friendly, colloquial, protective of the viewer's points. Speaks directly to the user as a trusted friend: <em>"Bhaiya, runs and points, dono control mein!"</em>.</p>
+                </div>
+                <div class="card card-accent-amber">
+                    <span class="badge badge-amber">30% Explorer</span>
+                    <h3>Differential Hunter</h3>
+                    <p>Hunts for high-upside differentials, clean sheet pathways, and under-owned gems: <em>"Risk hai toh ishq hai, let's punt"</em>.</p>
+                </div>
+                <div class="card card-accent-red">
+                    <span class="badge badge-red">10% Showman</span>
+                    <h3>Witty Entertainer</h3>
+                    <p>High energy, confident hooks, signature laugh, and engaging pacing to prevent short-form dropoff.</p>
+                </div>
+            </div>
+            
+            <h2>Voice & Tone Guidelines</h2>
+            <div class="grid-2">
+                <div class="card card-accent">
+                    <h3>DO:</h3>
+                    <p>âœ“ Start immediately with the core decision: <em>"Mera simple call..."</em></p>
+                    <p>âœ“ Use natural, conversational Hinglish football terms (e.g., <em>"rotation risk"</em>, <em>"points dilayega"</em>, <em>"clean sheet route"</em>).</p>
+                    <p>âœ“ Highlight mistakes and label uncertainty clearly: <em>"Form kharab hai, avoid karo"</em>.</p>
+                </div>
+                <div class="card card-accent-red">
+                    <h3>DO NOT:</h3>
+                    <p>âœ— Use formal corporate English or dry mathematical formulas without translating them into direct recommendations.</p>
+                    <p>âœ— Shout or use hyperactive gaming streamer voice patterns.</p>
+                    <p>âœ— Promise guaranteed points, secure returns, or cheat codes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Visual System -->
+        <div id="section-visuals" class="content-section">
+            <h1>Visual System</h1>
+            <p class="subtitle">Colors, Typography, and Layout Specifications</p>
+            
+            <h2>Brand Colors (Click to Copy Hex)</h2>
+            <div class="color-grid">
+                <div class="color-card" onclick="copyHex('#07111F')">
+                    <div class="color-block" style="background-color: #07111F;"></div>
+                    <span class="color-name">Deep Navy</span>
+                    <span class="color-hex">#07111F</span>
+                </div>
+                <div class="color-card" onclick="copyHex('#12B76A')">
+                    <div class="color-block" style="background-color: #12B76A;"></div>
+                    <span class="color-name">Pitch Green</span>
+                    <span class="color-hex">#12B76A</span>
+                </div>
+                <div class="color-card" onclick="copyHex('#F7F7F2')">
+                    <div class="color-block" style="background-color: #F7F7F2;"></div>
+                    <span class="color-name">Chalk White</span>
+                    <span class="color-hex">#F7F7F2</span>
+                </div>
+                <div class="color-card" onclick="copyHex('#F5B841')">
+                    <div class="color-block" style="background-color: #F5B841;"></div>
+                    <span class="color-name">Signal Amber</span>
+                    <span class="color-hex">#F5B841</span>
+                </div>
+                <div class="color-card" onclick="copyHex('#EF4444')">
+                    <div class="color-block" style="background-color: #EF4444;"></div>
+                    <span class="color-name">Risk Red</span>
+                    <span class="color-hex">#EF4444</span>
+                </div>
+                <div class="color-card" onclick="copyHex('#273142')">
+                    <div class="color-block" style="background-color: #273142;"></div>
+                    <span class="color-name">Dark Slate</span>
+                    <span class="color-hex">#273142</span>
+                </div>
+            </div>
+            
+            <h2>Typography Sandbox</h2>
+            <div class="font-sandbox">
+                <div class="sandbox-row">
+                    <div class="sandbox-meta">
+                        <strong>HEADLINE (Anton)</strong><br>
+                        Sports display, uppercase
+                    </div>
+                    <div class="sandbox-text" style="font-family: var(--font-header); font-size: 2.8rem; line-height: 1.1; letter-spacing: 2px;">
+                        WORLD CUP GW1 CAPTAIN CALL: PUNT OR LOCK?
+                    </div>
+                </div>
+                <div class="sandbox-row">
+                    <div class="sandbox-meta">
+                        <strong>BODY (Manrope)</strong><br>
+                        Readability sans-serif
+                    </div>
+                    <div class="sandbox-text" style="font-family: var(--font-body); font-size: 1.1rem; color: var(--text-gray);">
+                        Sasta aur tikau defender chuno bhaiya jo 90 minutes start karega. Bench points waste karne se behtar hai differential punt pe risk lo.
+                    </div>
+                </div>
+                <div class="sandbox-row">
+                    <div class="sandbox-meta">
+                        <strong>NUMBERS & METRICS</strong><br>
+                        IBM Plex Mono (Monospace)
+                    </div>
+                    <div class="sandbox-text" style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 600; color: var(--accent-amber);">
+                        Â£5.5m Price | 4.2% Owned | xGI: 0.85
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: Envato Reworks -->
+        <div id="section-envato" class="content-section">
+            <h1>Envato Reworks</h1>
+            <p class="subtitle">Integration of Soccer-Specific Envato Assets</p>
+            
+            <div class="card card-accent-amber" style="margin-bottom: 2.5rem;">
+                <span class="badge badge-amber">Typography & Asset Upgrade</span>
+                <h3>Integrating Soccer-Specific Envato Library</h3>
+                <p>We audited the newly updated Envato assets containing dedicated football fonts and template layouts. To build a premium sports broadcast look, we reworked the visual hierarchy to utilize these specific assets instead of generic fonts, providing a completely bespoke brand package.</p>
+            </div>
+            
+            <h2>Asset Sourcing List & Mappings</h2>
+            <div class="card" style="padding: 1.5rem 2rem; margin-bottom: 2.5rem;">
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>World Modern Sans-Serif Soccer Cup Font</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Fonts/world-modern-sans-serif-soccer-cup-font`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-60AB</span>
+                        <span class="badge badge-green">Primary Display Headline</span>
+                    </div>
+                </div>
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>Inter-Soccer Display Outline Jersey Font</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Fonts/inter-soccer-display-jersey-outline-spo`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-3C13</span>
+                        <span class="badge badge-green">Jersey Numbers & Scorebugs</span>
+                    </div>
+                </div>
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>Nutmeg League Rounded Font</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Fonts/nutmeg-league`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-2012</span>
+                        <span class="badge badge-green">Social Body & Overlay Callouts</span>
+                    </div>
+                </div>
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>High-Quality Football Player Card PSD Mockup</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Photoshop and PSD Assets/high-quality-football-player-card-mocku`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-086D</span>
+                        <span class="badge badge-amber">Stat Overlays & Player Profiles</span>
+                    </div>
+                </div>
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>Soccer Youtube Thumbnails Pack PSD</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Photoshop and PSD Assets/soccer-youtube-thumbnails-pack`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-4AFA</span>
+                        <span class="badge badge-amber">Shorts & YouTube Covers</span>
+                    </div>
+                </div>
+                
+                <div class="envato-asset-row">
+                    <div>
+                        <strong>Soccer Channel YouTube Banners PSD</strong><br>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Local Folder: `Photoshop and PSD Assets/soccer-channel-youtube-banners`</span>
+                    </div>
+                    <div class="envato-asset-meta">
+                        <span class="envato-icon-badge">ENVATO-DFC4</span>
+                        <span class="badge badge-amber">Channel Header Graphics</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <h2>Rework & Customization Guidelines</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>1. Thumbnails Customization</h3>
+                    <p>Open the PSD templates inside `soccer-youtube-thumbnails-pack-2026-03-4afa51cd`. Replace default headers with **World Modern Soccer Cup Font**. Change gradient overlays to the **Deep Navy (#07111F)** to **Pitch Green (#12B76A)** spectrum.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Player Card Overlay Setup</h3>
+                    <p>Use the PSD template in `high-quality-football-player-card-mocku-086d492f`. Insert the player's photo, set the border highlight to match the pick label color (Green for LOCK, Amber for PUNT, Red for AVOID), and display stats in **IBM Plex Mono**.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: Content Playbook -->
+        <div id="section-playbook" class="content-section">
+            <h1>Content Playbook</h1>
+            <p class="subtitle">Short-Form Scripts & Daily Launch Calendar</p>
+            
+            <h2>Weekly Launch Schedule</h2>
+            <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2.5rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matchday / Date</th>
+                            <th>Objective</th>
+                            <th>Instagram Reels / Stories</th>
+                            <th>YouTube Shorts</th>
+                            <th>YouTube Long-Form</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 0 (June 10)</strong></td>
+                            <td>Channel Kickoff</td>
+                            <td>Reel: Channel Intro Script</td>
+                            <td>Short: 5 Rules Before Lock</td>
+                            <td>8-Min: First WC Draft Revealed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 1 (June 11)</strong></td>
+                            <td>Opener Deadline</td>
+                            <td>Story: Confirmed Lineups</td>
+                            <td>Short: Captaincy Lab comparison</td>
+                            <td>Live deadline stream updates</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2 (June 12)</strong></td>
+                            <td>Reaction & Points</td>
+                            <td>Reel: MD1 Points (Maza aaya?)</td>
+                            <td>Short: 3 Players to Watch</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3 (June 13)</strong></td>
+                            <td>Clean Sheet Routes</td>
+                            <td>Carousel: Defensive Swings</td>
+                            <td>Short: Sasta aur Tikau defenders</td>
+                            <td>6-Min: MD2 Matchday Previews</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4 (June 14)</strong></td>
+                            <td>Differential Targets</td>
+                            <td>Reel: "Risk hai toh ishq hai"</td>
+                            <td>Short: Door Raho avoid warnings</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>Hinglish Script templates</h2>
+            
+            <div class="card" style="margin-bottom: 2rem;">
+                <span class="badge badge-green">Script 1: Channel Intro</span>
+                <div class="script-block" id="script1">Dosto, World Cup Fantasy kal se shuru ho raha hai, aur is channel pe hum isko bilkul simple rakhne wale hain.
+
+Koi lambi kahani nahi, koi boring spreadsheets nahi. Papa Ranjeet aapko har matchday se pehle 3 simple calls dega:
+1. Ek Tension-free Lock pick (points ki guaranteed delivery)
+2. Ek Punt (risk hai toh ishq hai, low owned but high points)
+3. Aur ek Avoid player jisse bilkul door rehna hai!
+
+Save this video right now! Comments mein 'DRAFT' likho ya team DM karo, match se pehle final draft ready kar denge. Maza aega!
+                    <button class="copy-btn" onclick="copyText('script1')">Copy Script</button>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-bottom: 2rem;">
+                <span class="badge badge-amber">Script 2: Rolling Captaincy Hack</span>
+                <div class="script-block" id="script2">World Cup Fantasy ka sabse bada hack pata hai? Rolling Captaincy!
+
+Standard FPL jaisa nahi hai bhaiya. Yahan agar aapka Day 1 ka captain blank jata hai, toh aap use badal kar Day 2 wale player ko captain bana sakte ho.
+
+Isliye apni draft team mein do clear captaincy options rakho. Day 1 pe kisi high-upside attacker pe punt loâ€”opener match ke star. Chal gaya toh badhiya, varna Day 2 pe Messi ya Mbappe ko armband de dena!
+
+Rules strategy ko details mein samajhne ke liye comment karo 'CAPTAIN' aur follow dabao!
+                    <button class="copy-btn" onclick="copyText('script2')">Copy Script</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: Live SVG Renders -->
+        <div id="section-renders" class="content-section">
+            <h1>Live SVG Mockups</h1>
+            <p class="subtitle">Bespoke Vector Layouts Rendered Live</p>
+            
+            <h2>Vector Logo System (Editable)</h2>
+            <div class="vector-preview-grid">
+                
+                <div class="vector-card">
+                    <div class="vector-display">
+                        <!-- Shield Logo SVG -->
+                        <svg viewBox="0 0 200 200" width="100%" height="100%">
+                            <polygon points="100,10 180,50 180,130 100,190 20,130 20,50" fill="#0A1627" stroke="#12B76A" stroke-width="6"/>
+                            <!-- Inner Grid Overlay -->
+                            <line x1="100" y1="10" x2="100" y2="190" stroke="rgba(18, 183, 106, 0.2)" stroke-width="2"/>
+                            <line x1="20" y1="90" x2="180" y2="90" stroke="rgba(18, 183, 106, 0.2)" stroke-width="2"/>
+                            <polygon points="100,30 160,60 160,120 100,165 40,120 40,60" fill="none" stroke="rgba(247, 247, 242, 0.1)" stroke-width="2"/>
+                            <!-- Logo Text -->
+                            <text x="100" y="95" font-family="'Anton', sans-serif" font-size="48" fill="#F7F7F2" text-anchor="middle" letter-spacing="1">XI-AG</text>
+                            <text x="100" y="130" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#F5B841" text-anchor="middle" letter-spacing="4">LAB</text>
+                            <circle cx="100" cy="150" r="4" fill="#12B76A"/>
+                        </svg>
+                    </div>
+                    <span class="vector-title">Option 1: Esports Shield</span>
+                    <p class="vector-desc">Esports-style tactical lab badge. Ideal for avatars.</p>
+                </div>
+                
+                <div class="vector-card">
+                    <div class="vector-display">
+                        <!-- Retro Crest SVG -->
+                        <svg viewBox="0 0 200 200" width="100%" height="100%">
+                            <circle cx="100" cy="100" r="80" fill="#0A1627" stroke="#F5B841" stroke-width="6"/>
+                            <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(247, 247, 242, 0.15)" stroke-width="2" stroke-dasharray="6,4"/>
+                            <!-- Ball Art -->
+                            <path d="M 60,60 Q 100,40 140,60 Q 160,100 140,140 Q 100,160 60,140 Q 40,100 60,60 Z" fill="none" stroke="#12B76A" stroke-width="3"/>
+                            <line x1="60" y1="60" x2="140" y2="140" stroke="#12B76A" stroke-width="2"/>
+                            <line x1="140" y1="60" x2="60" y2="140" stroke="#12B76A" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="15" fill="#0A1627" stroke="#F5B841" stroke-width="3"/>
+                            <!-- Circular Text -->
+                            <path id="textPath" d="M 30,100 A 70,70 0 1,1 170,100" fill="none"/>
+                            <text font-family="'Anton', sans-serif" font-size="14" fill="#F7F7F2" letter-spacing="3">
+                                <textPath href="#textPath" startOffset="50%" text-anchor="middle">Fantasy XI</textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <span class="vector-title">Option 2: Retro Crest</span>
+                    <p class="vector-desc">Circular classic football club heritage badge.</p>
+                </div>
+                
+                <div class="vector-card">
+                    <div class="vector-display">
+                        <!-- Monogram SVG -->
+                        <svg viewBox="0 0 200 200" width="100%" height="100%">
+                            <!-- Abstract glowing monogram -->
+                            <path d="M 50,50 L 150,150 M 150,50 L 50,150" stroke="#12B76A" stroke-width="12" stroke-linecap="round" opacity="0.3"/>
+                            <path d="M 55,50 L 145,140 M 145,50 L 55,140" stroke="#12B76A" stroke-width="8" stroke-linecap="round" filter="drop-shadow(0px 0px 8px #12B76A)"/>
+                            <!-- I Monogram line -->
+                            <line x1="100" y1="35" x2="100" y2="165" stroke="#F7F7F2" stroke-width="10" stroke-linecap="round"/>
+                            <line x1="100" y1="40" x2="100" y2="160" stroke="#F5B841" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="vector-title">Option 3: Minimalist Monogram</span>
+                    <p class="vector-desc">Glowing neon geometry for modern look.</p>
+                </div>
+
+            </div>
+            
+            <h2>Interactive Player Card Template (Envato Sourced Rework)</h2>
+            <div class="vector-preview-grid" style="grid-template-columns: 1fr 1.5fr;">
+                <div class="vector-card">
+                    <div class="vector-display backdrop-grid" style="height: 400px;">
+                        <!-- Player Card SVG -->
+                        <svg viewBox="0 0 240 340" width="100%" height="100%">
+                            <!-- Outer Card Frame -->
+                            <rect x="10" y="10" width="220" height="320" rx="14" fill="#0A1627" stroke="#12B76A" stroke-width="4" filter="drop-shadow(0px 10px 20px rgba(18,183,106,0.15))"/>
+                            <!-- Background Header Pitch Glow -->
+                            <path d="M 10,10 L 230,10 L 230,120 Q 120,80 10,120 Z" fill="rgba(18, 183, 106, 0.1)"/>
+                            
+                            <!-- Rating / Price Chip -->
+                            <rect x="25" y="25" width="55" height="22" rx="4" fill="#12B76A"/>
+                            <text x="52.5" y="41" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="700" fill="#0A1627" text-anchor="middle">LOCK</text>
+                            
+                            <text x="215" y="40" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#F5B841" text-anchor="end">Â£12.0m</text>
+                            
+                            <!-- Player Graphic Silhouette Placeholder -->
+                            <circle cx="120" cy="110" r="40" fill="rgba(247, 247, 242, 0.05)" stroke="rgba(247, 247, 242, 0.1)" stroke-width="2"/>
+                            <!-- Silhouette head & shoulders -->
+                            <path d="M 95,148 Q 120,135 145,148 L 155,165 L 85,165 Z" fill="rgba(247, 247, 242, 0.1)"/>
+                            
+                            <!-- Player Info -->
+                            <text x="120" y="195" font-family="'Anton', sans-serif" font-size="20" fill="#F7F7F2" text-anchor="middle" letter-spacing="1">M. SALAH</text>
+                            <text x="120" y="212" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#12B76A" text-anchor="middle" letter-spacing="2">MID | EGYPT</text>
+                            
+                            <!-- Stats Divider Line -->
+                            <line x1="30" y1="225" x2="210" y2="225" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                            
+                            <!-- Stats Block -->
+                            <text x="45" y="250" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#8A99AD" text-anchor="middle">xG</text>
+                            <text x="45" y="270" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#F7F7F2" text-anchor="middle">0.82</text>
+                            
+                            <text x="95" y="250" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#8A99AD" text-anchor="middle">xA</text>
+                            <text x="95" y="270" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#F7F7F2" text-anchor="middle">0.45</text>
+                            
+                            <text x="145" y="250" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#8A99AD" text-anchor="middle">xGI</text>
+                            <text x="145" y="270" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#F5B841" text-anchor="middle">1.27</text>
+                            
+                            <text x="195" y="250" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#8A99AD" text-anchor="middle">FIXT</text>
+                            <text x="195" y="270" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#12B76A" text-anchor="middle">A1</text>
+                            
+                            <!-- Card Footer -->
+                            <rect x="25" y="290" width="190" height="24" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <text x="120" y="306" font-family="'Manrope', sans-serif" font-size="9" font-weight="700" fill="#F7F7F2" text-anchor="middle">GW1 DEADLINE-READY CALL</text>
+                        </svg>
+                    </div>
+                    <span class="vector-title">SVG Player Stat Card Layout</span>
+                    <p class="vector-desc">Modeled after the `high-quality-football-player-card-mocku-086d492f` PSD.</p>
+                </div>
+                
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3>Interactive Template Framework</h3>
+                    <p>This layout represents the exact structure of the player stats card. Editors can overlay this directly onto videos or stories. By using Envato's <strong>Player Card PSD</strong>, you can insert high-resolution player photos behind the green accent mask.</p>
+                    <p style="margin-bottom: 0;"><strong>Color Coding Rules:</strong></p>
+                    <ul style="color: var(--text-gray); margin-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.3rem;"><strong style="color: var(--primary-green);">LOCK (Tension-free):</strong> Pitch Green border, green badge text.</li>
+                        <li style="margin-bottom: 0.3rem;"><strong style="color: var(--accent-amber);">PUNT (Risk/Maza Aega):</strong> Signal Amber border, amber badge text.</li>
+                        <li><strong style="color: var(--risk-red);">AVOID (Door Raho):</strong> Risk Red border, red badge text.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Lower Third Stat Bar Overlay</h2>
+            <div class="vector-display" style="height: 150px; background-color: var(--slate-dark);">
+                <!-- Lower Third SVG -->
+                <svg viewBox="0 0 600 80" width="100%" height="100%">
+                    <!-- Backdrop Bar -->
+                    <rect x="20" y="15" width="560" height="50" rx="6" fill="#07111F" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" filter="drop-shadow(0px 8px 16px rgba(0,0,0,0.3))"/>
+                    <!-- Pitch Green Left Edge Accent -->
+                    <rect x="20" y="15" width="6" height="50" rx="2" fill="#12B76A"/>
+                    
+                    <!-- Logo / Avatar Circle -->
+                    <circle cx="55" cy="40" r="18" fill="#0A1627" stroke="#12B76A" stroke-width="1.5"/>
+                    <text x="55" y="45" font-family="'Anton', sans-serif" font-size="16" fill="#F7F7F2" text-anchor="middle">XI</text>
+                    
+                    <!-- Presenter Info -->
+                    <text x="88" y="37" font-family="'Anton', sans-serif" font-size="18" fill="#F7F7F2" letter-spacing="1">PAPA RANJEET</text>
+                    <text x="88" y="53" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#12B76A" letter-spacing="3">THE LAB MANAGER</text>
+                    
+                    <!-- Stat 1 -->
+                    <text x="280" y="35" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#8A99AD" text-anchor="middle">TOP PICK</text>
+                    <text x="280" y="54" font-family="'Manrope', sans-serif" font-size="13" font-weight="800" fill="#F7F7F2" text-anchor="middle">M. SALAH (Â£12.0m)</text>
+                    
+                    <!-- Divider Line -->
+                    <line x1="390" y1="25" x2="390" y2="55" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                    
+                    <!-- Stat 2 -->
+                    <text x="490" y="35" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#8A99AD" text-anchor="middle">DEADLINE GW1</text>
+                    <text x="490" y="54" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="700" fill="#F5B841" text-anchor="middle">23:00 LOCK</text>
+                </svg>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast Copy Notification -->
+    <div class="toast" id="toastBox">HEX Code Copied!</div>
+
+    <script>
+        // Section Navigation Router
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Remove active from all nav buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Find clicking btn and add active
+            const clickedBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(sectionId));
+            if (clickedBtn) clickedBtn.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Copy HEX color helper
+        function copyHex(hexCode) {
+            navigator.clipboard.writeText(hexCode).then(() => {
+                showToast("Copied to Clipboard: " + hexCode);
+            });
+        }
+
+        // Copy Script Text helper
+        function copyText(elementId) {
+            const textElement = document.getElementById(elementId);
+            // remove copy btn text from inner text
+            let cleanText = textElement.innerText.replace("Copy Script", "").trim();
+            navigator.clipboard.writeText(cleanText).then(() => {
+                showToast("Script copied successfully!");
+            });
+        }
+
+        // Show Toast popup helper
+        function showToast(message) {
+            const toast = document.getElementById('toastBox');
+            toast.innerText = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+

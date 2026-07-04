@@ -7,6 +7,8 @@ Last Updated: [To be supplied]
 
 Options: Not Started | In Progress | Complete
 
+## Phase 1: Discovery
+
 ## Brand Foundation
 
 ## Brand / Product
@@ -33,8 +35,16 @@ Options: Not Started | In Progress | Complete
 ## Must Avoid
 [To be supplied]
 
+## Brand Archetype
+[To be supplied]
+
+## Brand Voice Keywords
+[To be supplied — e.g., bold, warm, irreverent, authoritative, playful]
+
 ## First-Use Touchpoints
 [Packaging / website / social / ads / retail / app / deck]
+
+## Phase 2: Strategy & Positioning
 
 ## Growth & Performance Marketing
 
@@ -110,6 +120,28 @@ Options: Not Started | In Progress | Complete
 - `reference-library/websites/`
 - `reference-library/social/`
 - `reference-library/competitors/`
+
+## Phase 3: Messaging
+
+## Elevator Pitch
+[To be supplied]
+
+## Tagline Options
+[To be supplied]
+
+## Value Pillars
+[To be supplied — 3-5 key differentiators or benefit themes]
+
+## Phase 4: Visual Identity
+
+## Color Direction
+[To be supplied — warm/cool, saturated/muted, primary palette preferences]
+
+## Typography Direction
+[To be supplied — serif/sans-serif, modern/classic, weight preferences]
+
+## Visual Style References
+[To be supplied — brands, websites, or design styles to emulate or avoid]
 
 ## Open Questions
 

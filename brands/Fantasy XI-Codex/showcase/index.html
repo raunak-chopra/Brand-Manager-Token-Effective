@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deadline XI with Papa Ranjeet - Brand Showcase</title>
+  <style>
+    @font-face {
+      font-family: "WorldCondensed";
+      src: url("../fonts/vendor-envato/world/WORLD-Condensed.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Crawford";
+      src: url("../fonts/vendor-envato/crawford/Crawford.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Manuver";
+      src: url("../fonts/vendor-envato/manuver/Manuver Rounded.otf") format("opentype");
+      font-display: swap;
+    }
+
+    :root {
+      --navy: #07111f;
+      --panel: #091826;
+      --panel-2: #0d2232;
+      --slate: #273142;
+      --green: #12b76a;
+      --white: #f7f7f2;
+      --amber: #f5b841;
+      --red: #ef4444;
+      --muted: #a9b4c4;
+      --line: rgba(247, 247, 242, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      color: var(--white);
+      font-family: Manuver, Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(7, 17, 31, 0.12), var(--navy) 680px),
+        url("../exports/youtube-channel-banner-2560x1440.png") center top / 1600px auto no-repeat;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+      gap: 18px;
+    }
+
+    .brandmark {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brandmark img {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      border: 1px solid rgba(18, 183, 106, 0.45);
+    }
+
+    .brandmark strong {
+      display: block;
+      font-family: WorldCondensed, Impact, sans-serif;
+      font-size: 34px;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .brandmark span {
+      display: block;
+      margin-top: 2px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-pills a {
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: rgba(9, 24, 38, 0.72);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 34px;
+      align-items: end;
+      padding: 66px 0 72px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      background: rgba(18, 183, 106, 0.15);
+      border: 1px solid rgba(18, 183, 106, 0.45);
+      border-radius: 8px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 0.95;
+      font-family: WorldCondensed, Impact, sans-serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 22px;
+      max-width: 760px;
+      font-size: clamp(76px, 10vw, 168px);
+    }
+
+    h2 {
+      font-size: clamp(48px, 6vw, 88px);
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin-top: 18px;
+      color: var(--white);
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 800;
+    }
+
+    .support-copy {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 690px;
+    }
+
+    .hero-panel {
+      background: rgba(9, 24, 38, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+    }
+
+    .hero-panel img {
+      border-radius: 8px;
+      border: 1px solid rgba(247, 247, 242, 0.12);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: rgba(9, 24, 38, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .stat b {
+      display: block;
+      color: var(--amber);
+      font-family: Crawford, Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    section {
+      padding: 74px 0;
+      border-top: 1px solid rgba(247, 247, 242, 0.08);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 100%;
+    }
+
+    .card.accent {
+      border-color: rgba(18, 183, 106, 0.45);
+      background: linear-gradient(180deg, rgba(18, 183, 106, 0.12), rgba(9, 24, 38, 0.95));
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--panel-2);
+      color: var(--white);
+      font-family: Crawford, Arial, sans-serif;
+      font-size: 18px;
+    }
+
+    .chip.green {
+      background: var(--green);
+      color: var(--navy);
+    }
+
+    .chip.amber {
+      background: var(--amber);
+      color: var(--navy);
+    }
+
+    .chip.red {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .persona {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .persona img {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .quote {
+      margin: 22px 0 0;
+      padding: 18px;
+      border-left: 5px solid var(--green);
+      background: rgba(18, 183, 106, 0.09);
+      border-radius: 0 8px 8px 0;
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .asset-frame {
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .asset-frame img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .swatch {
+      min-height: 112px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .swatch.dark-text {
+      color: var(--navy);
+    }
+
+    .swatch span {
+      display: block;
+      opacity: 0.76;
+    }
+
+    .formats {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .format-shot {
+      min-height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: flex-end;
+      padding: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .format-shot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7, 17, 31, 0.1), rgba(7, 17, 31, 0.82));
+    }
+
+    .format-shot > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .format-shot h3 {
+      margin-bottom: 8px;
+    }
+
+    .format-shot p {
+      margin: 0;
+      color: var(--white);
+      max-width: 560px;
+    }
+
+    .calendar {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .calendar th,
+    .calendar td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    .calendar th {
+      color: var(--green);
+      font-family: Crawford, Arial, sans-serif;
+      font-size: 18px;
+      background: rgba(18, 183, 106, 0.08);
+    }
+
+    .calendar tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .asset-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .small-assets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .footer {
+      padding: 40px 0 70px;
+      color: var(--muted);
+      border-top: 1px solid rgba(247, 247, 242, 0.08);
+      font-size: 14px;
+    }
+
+    .footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 940px) {
+      .hero,
+      .section-head,
+      .persona,
+      .visual-grid,
+      .formats,
+      .asset-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .grid-3,
+      .grid-2,
+      .palette {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-pills {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .stats,
+      .grid-3,
+      .grid-2,
+      .palette,
+      .small-assets {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 38px;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="wrap nav">
+      <div class="brandmark">
+        <img src="../exports/deadline-xi-logo-1080.png" alt="Deadline XI logo">
+        <div>
+          <strong>Deadline XI</strong>
+          <span>with Papa Ranjeet</span>
+        </div>
+      </div>
+      <nav class="nav-pills" aria-label="Page sections">
+        <a href="#position">Position</a>
+        <a href="#persona">Persona</a>
+        <a href="#content">Content</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#launch">Launch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div>
+          <span class="eyebrow">Hinglish fantasy football brand system</span>
+          <h1>Deadline-ready fantasy calls before lock.</h1>
+          <p class="hero-copy">Deadline XI is a football fantasy content channel led by Papa Ranjeet: a sharp, funny, no-fake-guarantee guide who helps managers choose captains, safe picks, punts, and avoids before the deadline.</p>
+          <p class="support-copy">Built for World Cup Fantasy first, but designed to expand into FPL, UCL Fantasy, and future tournament fantasy formats. The brand blends football-native visuals, tactical-board thinking, and fast Hinglish decision-making.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <b>Hinglish</b>
+              <span>Primary language</span>
+            </div>
+            <div class="stat">
+              <b>Faceless + Face</b>
+              <span>Dual production mode</span>
+            </div>
+            <div class="stat">
+              <b>Daily</b>
+              <span>Deadline content rhythm</span>
+            </div>
+            <div class="stat">
+              <b>XI</b>
+              <span>Football-first identity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <img src="../exports/youtube-channel-banner-2560x1440.png" alt="Deadline XI YouTube banner">
+          <p class="caption">Primary channel banner using Envato football stadium imagery and football-specific fonts.</p>
+        </div>
+      </section>
+
+      <section id="position">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Brand Position</h2>
+            <p>Fantasy football is noisy: deadlines, squads, rotation, fixtures, captains, prices, and last-minute panic. Deadline XI owns the simple moment viewers care about: what should I do before lock?</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card accent">
+              <h3>Core Promise</h3>
+              <p>Fast, practical fantasy football calls that tell the viewer what to lock, what to watch, what to punt, and what to avoid before deadline.</p>
+            </article>
+            <article class="card">
+              <h3>Audience</h3>
+              <p>Indian and global football fans who play fantasy but do not have time to track every press conference, lineup leak, injury update, and fixture swing.</p>
+            </article>
+            <article class="card">
+              <h3>Owned Word</h3>
+              <p><strong style="color: var(--amber);">Deadline-ready.</strong> The channel becomes associated with the last useful decision window before lock.</p>
+            </article>
+          </div>
+
+          <div class="grid-2" style="margin-top: 16px;">
+            <article class="card">
+              <h3>Onliness Statement</h3>
+              <p>Deadline XI is the fantasy football content brand that turns football chaos into simple Hinglish XI decisions for time-poor fantasy managers.</p>
+            </article>
+            <article class="card">
+              <h3>Brand Route</h3>
+              <p>Use <strong>Deadline XI</strong> as the channel name and <strong>Papa Ranjeet</strong> as the recurring host/persona. That gives the system a clean evergreen brand and a memorable human voice.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="persona">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Papa Ranjeet</h2>
+            <p>The channel voice is a smart football bada bhai: protective of the viewer's fantasy team, direct with advice, funny without becoming unserious, and transparent when a call is uncertain.</p>
+          </div>
+
+          <div class="persona">
+            <img src="../exports/papa-ranjeet-avatar-1080.png" alt="Papa Ranjeet avatar">
+            <div>
+              <div class="grid-2">
+                <article class="card">
+                  <h3>Personality Mix</h3>
+                  <p>60% Bada Bhai Analyst, 30% Explorer, 10% Showman. Helpful first, curious second, entertaining third.</p>
+                </article>
+                <article class="card">
+                  <h3>Voice</h3>
+                  <p>Conversational Hinglish. Short sentences. Football-native phrasing. No fake certainty, no betting-tip energy, no boring spreadsheet lecture.</p>
+                </article>
+              </div>
+              <div class="quote">"Naam bada hai, par minutes ka kya?"</div>
+              <div class="chips">
+                <span class="chip green">Tension-free pick</span>
+                <span class="chip amber">Risk hai toh ishq hai</span>
+                <span class="chip">Ruko aur dekho</span>
+                <span class="chip red">Door raho</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="content">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Content System</h2>
+            <p>The content is built around repeatable decisions. Every format should help the viewer act faster: captain, transfer, draft fix, player watch, or avoid.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>3 Before Lock</h3>
+              <p>One Lock, one Watch, one Avoid before deadline. Fast, repeatable, save-worthy.</p>
+            </article>
+            <article class="card">
+              <h3>Captaincy Lab</h3>
+              <p>Safe captain vs upside captain vs punt captain. Designed for comments: SAFE or PUNT?</p>
+            </article>
+            <article class="card">
+              <h3>Draft Doctor</h3>
+              <p>Viewer team screenshots reviewed with direct Hinglish advice and the Lock / Watch / Punt / Avoid system.</p>
+            </article>
+            <article class="card">
+              <h3>Sasta Aur Tikau</h3>
+              <p>Budget enablers who actually play. Cheap only matters if the player gets minutes.</p>
+            </article>
+            <article class="card">
+              <h3>Good Pick, Bad Timing</h3>
+              <p>Explains why a famous player can still be a poor fantasy choice because of fixtures, rotation, or price.</p>
+            </article>
+            <article class="card">
+              <h3>Tomorrow's Edge</h3>
+              <p>Early watchlist for the next matchday before the conversation becomes crowded.</p>
+            </article>
+          </div>
+
+          <div class="asset-strip" style="margin-top: 20px;">
+            <div class="asset-frame">
+              <img src="../exports/youtube-thumbnail-captain-call-1280x720.png" alt="Captain call thumbnail">
+              <p class="caption">YouTube/Shorts thumbnail direction: big decision, one clear question, high contrast.</p>
+            </div>
+            <div class="asset-frame">
+              <img src="../exports/instagram-story-deadline-reminder-1080x1920.png" alt="Instagram deadline reminder story">
+              <p class="caption">Story prompt: deadline urgency and draft submissions.</p>
+            </div>
+            <div class="asset-frame">
+              <img src="../exports/player-stat-card-900x1180.png" alt="Player stat card">
+              <p class="caption">Player card for Lock / Watch / Punt / Avoid calls.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="visuals">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Visual Identity</h2>
+            <p>The visual system uses football stadium imagery, tactical-board overlays, sharp broadcast panels, and high-impact sports typography sourced from the connected Envato library.</p>
+          </div>
+
+          <div class="visual-grid">
+            <div class="asset-frame">
+              <img src="../exports/faceless-tactical-backdrop-1920x1080.png" alt="Faceless tactical backdrop">
+              <p class="caption">Faceless video master screen: fantasy dashboard or tactical overlays on the left, decision board on the right.</p>
+            </div>
+            <div class="asset-frame">
+              <img src="../exports/face-camera-backdrop-1920x1080.png" alt="Face camera backdrop">
+              <p class="caption">Face-on-camera background for green screen, TV monitor, or post-production.</p>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top: 20px;">
+            <article class="card">
+              <h3>Color System</h3>
+              <div class="palette">
+                <div class="swatch" style="background: #07111f;">Deep Navy<span>#07111F</span></div>
+                <div class="swatch" style="background: #091826;">Panel<span>#091826</span></div>
+                <div class="swatch" style="background: #273142;">Slate<span>#273142</span></div>
+                <div class="swatch dark-text" style="background: #12b76a;">Pitch Green<span>#12B76A</span></div>
+                <div class="swatch dark-text" style="background: #f5b841;">Signal Amber<span>#F5B841</span></div>
+                <div class="swatch" style="background: #ef4444;">Risk Red<span>#EF4444</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Typography</h3>
+              <p><strong style="color: var(--white);">WORLD Condensed</strong> for the main football headline feel. <strong style="color: var(--white);">Crawford</strong> for broadcast chips and UI labels. <strong style="color: var(--white);">Manuver Rounded</strong> for friendly social accents. <strong style="color: var(--white);">Inter Soccer</strong> for stat-card data.</p>
+              <div class="asset-frame" style="margin-top: 16px;">
+                <img src="../exports/font_comparison.png" alt="Football font comparison">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="channels">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Channel Roles</h2>
+            <p>Each channel has a different job, but all of them point back to one behavior: watch before lock, comment your draft, and return for the next decision.</p>
+          </div>
+
+          <div class="formats">
+            <div class="format-shot" style="background-image: url('../exports/faceless-tactical-backdrop-1920x1080.png');">
+              <div>
+                <h3>Faceless Workflow</h3>
+                <p>Screen recording of fantasy dashboard, tactical board overlays, voiceover, avatar corner, quick zooms, and decision chips. Best for Shorts, Reels, and daily updates.</p>
+              </div>
+            </div>
+            <div class="format-shot" style="background-image: url('../exports/face-camera-backdrop-1920x1080.png');">
+              <div>
+                <h3>Face Version</h3>
+                <p>Talking-head Papa Ranjeet with dark football backdrop, stat-card overlays, and direct eye-contact calls. Best for trust, long-form, and draft review episodes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 18px;">
+            <article class="card">
+              <h3>Instagram</h3>
+              <p>Discovery, saves, polls, draft screenshots, countdowns, and quick Hinglish reminders.</p>
+            </article>
+            <article class="card">
+              <h3>YouTube Shorts</h3>
+              <p>Searchable quick advice: captain battles, 3 picks, avoid traps, budget enablers.</p>
+            </article>
+            <article class="card">
+              <h3>YouTube Long</h3>
+              <p>Trust-building: team reveal, matchday preview, chip/rules explainer, Draft Doctor.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="launch">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Launch Plan</h2>
+            <p>The launch system is designed for speed: one strong identity, one persona, one daily operating rhythm, and a week of repeatable content formats.</p>
+          </div>
+
+          <table class="calendar" aria-label="Launch week content calendar">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Objective</th>
+                <th>Instagram</th>
+                <th>YouTube</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>June 10</td>
+                <td>Channel launch</td>
+                <td>Papa Ranjeet intro Reel, story poll, draft question box</td>
+                <td>Short intro and first fantasy draft video</td>
+              </tr>
+              <tr>
+                <td>June 11</td>
+                <td>Opener deadline</td>
+                <td>Opener picks carousel, countdown, lineup reminder</td>
+                <td>Captaincy Lab short</td>
+              </tr>
+              <tr>
+                <td>June 12</td>
+                <td>Reaction loop</td>
+                <td>What worked / failed Reel</td>
+                <td>3 players to watch</td>
+              </tr>
+              <tr>
+                <td>June 13</td>
+                <td>Fixture swing</td>
+                <td>Defensive routes carousel</td>
+                <td>Budget enabler short and Matchday 2 draft fixes</td>
+              </tr>
+              <tr>
+                <td>June 14-16</td>
+                <td>Differentials + Draft Doctor</td>
+                <td>Punts, captain polls, viewer team reviews</td>
+                <td>Captaincy prep and quick draft fixes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="asset-kit">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Asset Kit</h2>
+            <p>The current pack includes upload-ready PNG exports, editable SVG sources, Envato football fonts, football imagery, and PSD/EPS references for future production.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>Ready To Use</h3>
+              <div class="chips">
+                <span class="chip green">Logo PNG</span>
+                <span class="chip green">YouTube banner</span>
+                <span class="chip green">Thumbnail</span>
+                <span class="chip green">Story</span>
+                <span class="chip green">Backdrops</span>
+                <span class="chip green">Highlight covers</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Production Notes</h3>
+              <p>No official FIFA marks, trophy imagery, or player likenesses are used. Player picks, prices, injuries, rules, chips, and deadlines must be verified before publishing.</p>
+            </article>
+          </div>
+
+          <div class="small-assets" style="margin-top: 18px;">
+            <div class="asset-frame"><img src="../exports/highlight-cover-start-here-1080.png" alt="Start Here highlight cover"></div>
+            <div class="asset-frame"><img src="../exports/highlight-cover-captains-1080.png" alt="Captains highlight cover"></div>
+            <div class="asset-frame"><img src="../exports/highlight-cover-drafts-1080.png" alt="Drafts highlight cover"></div>
+            <div class="asset-frame"><img src="../exports/highlight-cover-results-1080.png" alt="Results highlight cover"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <p><strong>Deadline XI with Papa Ranjeet</strong> - brand showcase generated from local workspace assets in `brands/Fantasy XI-Codex`. Envato football/soccer assets are used as source/reference material from the connected organized library.</p>
+    </footer>
+  </div>
+</body>
+</html>

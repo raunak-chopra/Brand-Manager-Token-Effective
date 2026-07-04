@@ -1,0 +1,42 @@
+Section,Field,Description,Your Answer,Example / Guidance
+Phase 1: Discovery,Brand / Product Name,The official name of the brand or product.,,e.g. Acme SaaS or Horizon Coffee
+Phase 1: Discovery,Category,The specific industry or market category.,,e.g. B2B Sales Productivity Tool or Premium Organic Direct-to-Consumer Coffee
+Phase 1: Discovery,Product Explanation,A simple explanation of what the product is and how it works.,,e.g. A Chrome extension that automates LinkedIn follow-ups using personalized templates.
+Phase 1: Discovery,Primary Audience,Who is the ideal customer? (Demographics, job titles, pain points),,e.g. B2B Sales Development Representatives (SDRs) at software companies with 50-500 employees who struggle with low response rates.
+Phase 1: Discovery,Core Promise,The single biggest benefit or transformation the product delivers.,,e.g. Save 10 hours a week and double your meeting booking rate.
+Phase 1: Discovery,Desired Perception,How do you want people to feel or think about your brand?,,e.g. Professional yet approachable, highly efficient, state-of-the-art, trustworthy.
+Phase 1: Discovery,Competitors / Category References,Top 3-5 competitors or aspirational brands you look up to.,,e.g. Competitor A, Competitor B, Reference Brand C (for design inspiration)
+Phase 1: Discovery,Must Avoid,Styles, tones, words, or creative angles to stay away from.,,e.g. Avoid overly corporate jargon, don't use the color red, do not mention pricing directly in prospecting ads.
+Phase 1: Discovery,Brand Archetype,The primary personality framework of your brand.,,e.g. The Creator (innovative), The Sage (authoritative), The Hero (performance-driven), The Everyday (approachable)
+Phase 1: Discovery,Brand Voice Keywords,3-5 words that describe the brand's tone of voice.,,e.g. Warm, concise, direct, helpful, energetic.
+Phase 1: Discovery,First-Use Touchpoints,Where will customers encounter this brand first?,,e.g. Meta Ads -> Landing Page -> Email Welcome Sequence
+Phase 2: Strategy & Positioning,Business Model,How does the business generate revenue?,,e.g. SaaS subscription (monthly/annual) or D2C E-commerce
+Phase 2: Strategy & Positioning,Primary Conversion Event,The main action you want a user to take to measure marketing success.,,e.g. Completed Purchase, Lead Form Submission, Free Trial Sign-up, Booked Demo
+Phase 2: Strategy & Positioning,Average Order Value (AOV),The average amount spent when a customer purchases.,,e.g. $85
+Phase 2: Strategy & Positioning,Customer Lifetime Value (LTV),The estimated total revenue a customer generates over time.,,e.g. $350 (over 12 months)
+Phase 2: Strategy & Positioning,Target CAC / CPA,The maximum amount you are willing to pay to acquire a customer / lead.,,e.g. $45 CPA for a trial signup or $75 CAC for a paid customer
+Phase 2: Strategy & Positioning,Target ROAS,The target Return on Ad Spend to stay profitable.,,e.g. 2.5x (or 250%)
+Phase 2: Strategy & Positioning,Monthly Ad Budget,The current or planned monthly spend across paid channels.,,e.g. $5,000 (Meta: $3,500; Google Search: $1,500)
+Phase 2: Strategy & Positioning,Current Performance Baseline,Any existing baseline metrics.,,e.g. Meta Ads CPA: $55; CTR: 1.8%; CVR: 2.2%
+Active Channels & Tech Stack,Acquisition Channels,Active marketing channels.,,e.g. Meta Ads, Google Search Ads, SEO, Email newsletter
+Active Channels & Tech Stack,Analytics Platform,Where you track visitor activity and metrics.,,e.g. Google Analytics 4 (GA4), Mixpanel, Amplitude
+Active Channels & Tech Stack,Attribution Tool,Tool used to attribute conversions to channels.,,e.g. Triple Whale, Northbeam, GA4 Last-Click
+Active Channels & Tech Stack,Pixel / Tag Status,Are tracking pixels installed and verified?,,e.g. Meta Pixel & CAPI installed; Google Tag Manager set up
+Active Channels & Tech Stack,CRM / CDP,Where customer records are kept.,,e.g. HubSpot, Salesforce, ActiveCampaign
+Active Channels & Tech Stack,Email / SMS Platform,Platform used for automated flows and campaigns.,,e.g. Klaviyo, Mailchimp, ActiveCampaign
+Active Channels & Tech Stack,UTM Convention,The structure used for tracking links.,,e.g. utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.name}}
+Creative & Offer,Current Primary Offer,The hook/incentive used to convert cold traffic.,,e.g. 14-day free trial (no credit card required) or 15% off first purchase
+Creative & Offer,Proven Creative Hooks,Angled hooks or messages that have historically performed well.,,e.g. "How I saved 10 hours of admin work last week" (testimonial-style hook)
+Creative & Offer,Ad Copy Constraints,Any character limits or rigid structural preferences.,,e.g. Keep primary text under 150 characters for Reels placement.
+Creative & Offer,Legal / Claims Rules,Regulatory or compliance rules you must follow.,,e.g. Cannot promise specific monetary earnings, must include disclaimer about results varying.
+Retention & Lifecycle,Active Email Flows,Automation sequences currently live.,,e.g. Welcome Series, Cart Abandonment Flow, Win-Back Campaign
+Retention & Lifecycle,Active SMS Campaigns,Text message automations live.,,e.g. Post-purchase shipping updates + cross-sell flow
+Retention & Lifecycle,Loyalty / Referral Programs,System to incentivize repeat purchases/sharing.,,e.g. Refer a friend and get $20, friend gets 20% off
+Retention & Lifecycle,Churn Signals,Actions indicating a user is about to leave.,,e.g. No login for 14 consecutive days or cancelled subscription pre-renewal
+Mandatory Inputs,Logo Assets,Availability of vector logo files.,[Yes / No / Link],e.g. Yes (SVG / PNG files located in shared folder)
+Mandatory Inputs,Visual Brand Guidelines,Colors, typography, and spacing rules.,[Yes / No / Link],e.g. Yes (BrandBook_v2.pdf)
+Mandatory Inputs,Font Files / Licenses,Approved fonts and confirmation of licensing.,[Yes / No / Link],e.g. Yes (Montserrat / Playfair Display licensed via Google Fonts)
+Mandatory Inputs,Product Images & Videos,High-quality assets for ad creation.,[Yes / No / Link],e.g. Yes (Google Drive link: /assets/raw-products)
+Mandatory Inputs,Tracking / Pixel Access,Admin access or sharing status for pixels.,[Yes / No / Link],e.g. Share via Meta Business Manager ID: XXXXXXXXX
+Mandatory Inputs,Ad Account Access,Access for audit and optimization.,[Yes / No / Link],e.g. Share via Google Ads CID: XXX-XXX-XXXX
+Mandatory Inputs,Email Platform Access,Access to review flows and segmentation.,[Yes / No / Link],e.g. Invite to user account or share credentials

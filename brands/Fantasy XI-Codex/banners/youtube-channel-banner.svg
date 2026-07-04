@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI YouTube banner</title>
+  <desc id="desc">YouTube channel banner source with safe area centered.</desc>
+  <rect width="2560" height="1440" fill="#07111F"/>
+  <g opacity=".22" stroke="#F7F7F2" stroke-width="4" fill="none">
+    <path d="M170 188h2220v1064H170z"/>
+    <path d="M1280 188v1064"/>
+    <circle cx="1280" cy="720" r="172"/>
+    <path d="M170 480h260v480H170M2390 480h-260v480h260"/>
+  </g>
+  <g opacity=".3" stroke="#12B76A" stroke-width="5" fill="none">
+    <path d="M346 356 704 492 1018 410 1280 720 1604 456 1908 538 2220 374"/>
+    <path d="M414 1070 780 930 1080 1010 1376 862 1688 980 2090 850"/>
+  </g>
+  <rect x="560" y="423" width="1440" height="594" rx="34" fill="#091826" stroke="#273142" stroke-width="6"/>
+  <text x="1280" y="640" text-anchor="middle" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="182" fill="#F7F7F2">DEADLINE XI</text>
+  <rect x="790" y="704" width="980" height="76" rx="10" fill="#12B76A"/>
+  <text x="1280" y="758" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="46" font-weight="900" fill="#07111F">WITH PAPA RANJEET</text>
+  <text x="1280" y="858" text-anchor="middle" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="44" font-weight="800" fill="#F5B841">SAFE PICKS • SMART PUNTS • CAPTAINCY CALLS</text>
+  <text x="1280" y="936" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#F7F7F2" opacity=".72">Daily World Cup Fantasy calls in Hinglish</text>
+  <rect x="772" y="508" width="1016" height="424" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="12 12" opacity=".5"/>
+  <text x="1280" y="980" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#EF4444" opacity=".8">YouTube desktop/mobile safe area guide</text>
+</svg>

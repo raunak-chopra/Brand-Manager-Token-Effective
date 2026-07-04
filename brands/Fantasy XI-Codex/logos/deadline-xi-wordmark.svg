@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 480" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI wordmark</title>
+  <desc id="desc">Horizontal wordmark for Deadline XI with Papa Ranjeet subtitle.</desc>
+  <rect width="1800" height="480" fill="#07111F"/>
+  <path d="M116 84h222l74 74v164l-74 74H116z" fill="#091826" stroke="#12B76A" stroke-width="16"/>
+  <path d="M172 164l42 128M214 164l-42 128M270 164v128M318 164v128" stroke="#F7F7F2" stroke-width="30"/>
+  <path d="M368 104 330 214h54l-80 150 24-108h-50l54-152Z" fill="#F5B841"/>
+  <text x="482" y="225" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="130" font-weight="900" fill="#F7F7F2">DEADLINE XI</text>
+  <rect x="492" y="264" width="522" height="54" rx="8" fill="#12B76A"/>
+  <text x="520" y="303" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="32" font-weight="900" fill="#07111F">HINGLISH FANTASY CALLS BEFORE LOCK</text>
+  <text x="1048" y="306" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#F5B841">PAPA RANJEET</text>
+</svg>

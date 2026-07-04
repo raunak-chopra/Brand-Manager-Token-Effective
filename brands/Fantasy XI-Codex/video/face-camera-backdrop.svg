@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI face-camera backdrop</title>
+  <desc id="desc">Clean background for face-on-camera videos with room for presenter in center.</desc>
+  <rect width="1920" height="1080" fill="#07111F"/>
+  <g opacity=".18" stroke="#F7F7F2" stroke-width="3" fill="none">
+    <path d="M140 142h1640v796H140z"/>
+    <path d="M960 142v796"/>
+    <circle cx="960" cy="540" r="140"/>
+  </g>
+  <rect x="96" y="92" width="420" height="94" rx="10" fill="#12B76A"/>
+  <text x="126" y="154" font-family="Bigstage, Impact, Arial Black, sans-serif" font-size="58" fill="#07111F">DEADLINE XI</text>
+  <rect x="1308" y="92" width="516" height="94" rx="10" fill="#F5B841"/>
+  <text x="1340" y="154" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#07111F">PAPA RANJEET</text>
+  <rect x="116" y="860" width="484" height="72" rx="8" fill="#091826" stroke="#273142" stroke-width="4"/>
+  <text x="148" y="908" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="900" fill="#F7F7F2">LOCK / WATCH / PUNT / AVOID</text>
+  <g opacity=".42" stroke="#12B76A" stroke-width="4" fill="none">
+    <path d="M138 742 382 618 586 696"/>
+    <path d="M1338 716 1532 592 1778 662"/>
+  </g>
+</svg>

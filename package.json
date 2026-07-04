@@ -1,0 +1,16 @@
+{
+  "name": "brand-manager-bot",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Token-efficient local workspace for brand, hygiene, and performance operations.",
+  "type": "commonjs",
+  "scripts": {
+    "validate:findings": "node tools/clis/validate-findings.js logs/hygiene/findings.sample.json",
+    "validate:creative": "node tools/clis/validate-creative-brief.js",
+    "tokens:summary": "node tools/clis/token-tracker.js --summary --rebuild-json --dashboard"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

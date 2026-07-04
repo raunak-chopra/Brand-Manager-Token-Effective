@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Results highlight cover</title>
+  <desc id="desc">Instagram highlight cover for results and review content.</desc>
+  <rect width="1080" height="1080" fill="#07111F"/>
+  <rect x="270" y="250" width="120" height="420" rx="18" fill="#12B76A"/>
+  <rect x="480" y="360" width="120" height="310" rx="18" fill="#F5B841"/>
+  <rect x="690" y="180" width="120" height="490" rx="18" fill="#EF4444"/>
+  <text x="540" y="860" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="900" fill="#F7F7F2">RESULTS</text>
+</svg>

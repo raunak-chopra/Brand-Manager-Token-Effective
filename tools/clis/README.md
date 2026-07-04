@@ -18,6 +18,7 @@ Read `tools/REGISTRY.md` first to confirm whether a platform has a local CLI. Do
 | `meta-ads.js` | Ads | `META_ACCESS_TOKEN`, `META_AD_ACCOUNT_ID` |
 | `mixpanel.js` | Analytics | `MIXPANEL_TOKEN`; query access may need `MIXPANEL_API_KEY` and `MIXPANEL_SECRET` |
 | `optimizely.js` | A/B testing | `OPTIMIZELY_API_KEY` |
+| `validate-findings.js` | Local validation | None |
 
 ## Run Pattern
 
@@ -31,6 +32,7 @@ Examples:
 node tools/clis/meta-ads.js campaigns list --limit 10
 node tools/clis/ga4.js reports realtime
 node tools/clis/mailchimp.js campaigns list --limit 20
+node tools/clis/validate-findings.js logs/hygiene/findings.sample.json
 ```
 
 ## Safety Pattern
@@ -65,3 +67,7 @@ When a CLI command is tested and useful, update both places:
 2. This README if auth, command structure, or available coverage changes
 
 Use `[To be supplied]` for missing account IDs, API scopes, permissions, or untested commands.
+
+## Local Validation
+
+`validate-findings.js` checks dashboard-ready hygiene/performance finding records. It accepts either a JSON array or an object with a `findings` array and requires the extended dashboard fields: `rule_version`, `source_data`, `updated_at`, and `action_history`.

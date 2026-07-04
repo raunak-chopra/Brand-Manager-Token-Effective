@@ -1,77 +1,69 @@
 # Context Index
 
-Use this file as the first read for this brand.
+First-read file for this brand. Keep it compact.
 
-## Brand
-[To be supplied]
+## Snapshot
 
-## Intake Status
-[Not Started / In Progress / Complete / To be supplied]
+| Field | Value |
+|---|---|
+| Brand | [To be supplied] |
+| Intake Status | [Not Started / In Progress / Complete / To be supplied] |
+| Category | [To be supplied] |
+| Primary Audience | [To be supplied] |
+| Core Promise | [To be supplied] |
+| Desired Perception | [To be supplied] |
+| First-Use Touchpoints | [To be supplied] |
 
-## Category
-[To be supplied]
+## Claims And Proof
 
-## Audience
-[To be supplied]
-
-## Core Promise
-[To be supplied]
-
-## Desired Perception
-[To be supplied]
-
-## First-Use Touchpoints
-[To be supplied]
+| Field | Value |
+|---|---|
+| Approved Claims | [To be supplied] |
+| Proof Sources | [To be supplied] |
+| Legal/Compliance Limits | [To be supplied] |
+| Font/Asset Licenses | [To be supplied] |
 
 ## Performance Snapshot
 
-| Field | Status |
+| Field | Value |
 |---|---|
 | Business Model | [To be supplied] |
+| Current Offer | [To be supplied] |
+| Active Channels | [To be supplied] |
 | Primary Conversion Event | [To be supplied] |
+| Tracking Status | [To be supplied] |
 | Target CAC / CPA | [To be supplied] |
 | Target ROAS | [To be supplied] |
-| Active Channels | [To be supplied] |
-| Tracking Status | [To be supplied] |
-| Current Offer | [To be supplied] |
 
-## Source Of Truth
+## Load Next Only If
 
 | Need | File |
 |---|---|
-| Brand intake | `brand-intake.md` |
-| Current guidelines | `brands/[Brand]/brand-guidelines/brand-guidelines.md` |
-| Reference audit | `reference-index.md` |
-| Moodboard routes | `moodboard-territories.md` |
-| Brand book | `brand-book.md` |
-| Asset checklist | `asset-checklist.md` |
-| Learnings registry | `learnings-registry.md` |
-| Experiments backlog | `experiments-backlog.md` |
+| Full intake | `brand-intake.md` |
+| Current rules | `brand-book.md` |
+| Visual references | `reference-index.md`, then selected `reference-library/` files |
+| Assets or gaps | `asset-checklist.md` |
+| Asset inventory | `asset-inventory.md` |
+| Prompt inventory | `prompt-library.md` |
+| Creative territories | `creative-territories.md` |
+| Creative winners | `creative-winners.md` |
+| Generated image concepts | `generated-image-log.md` |
+| Confirmed learnings | `learnings-registry.md` |
+| Tests | `experiments-backlog.md` |
+| Readiness score | `brand-readiness-score.md` |
+| Memory summary | `memory-graph/index.md` |
+| Claim proof | `claim-registry.md` |
+| Settled decisions | `decision-log.md` |
 
-## Reference Folders
+## Do Not Load By Default
 
-| Need | Folder |
-|---|---|
-| Approved style | `reference-library/approved/` |
-| Rejected style | `reference-library/rejected/` |
-| Fonts | `reference-library/fonts/` |
-| Colors | `reference-library/colors/` |
-| Visual styles | `reference-library/styles/` |
-| Photography | `reference-library/photography/` |
-| Illustration | `reference-library/illustration/` |
-| Packaging | `reference-library/packaging/` |
-| Websites | `reference-library/websites/` |
-| Social | `reference-library/social/` |
-| Competitors | `reference-library/competitors/` |
-*Note: If local reference folders are empty, use the Envato asset library guide (`shared-reference-library/tools-and-prompts/envato-asset-library-guide.md`) to query external assets.*
-
-## Do Not Load Unless Needed
-
-- Full brand guideline
-- Full asset folders
-- All visual references
-- Tool integrations
+- full guidelines
+- all references
+- asset folders
+- old outputs
+- tool integrations
+- full memory graph subfiles unless the index points to them
 
 ## Update Rule
 
-Keep this file as the fast-loading summary. Add only confirmed rules and source paths. Put longer context in `brand-intake.md`, `brand-guidelines/`, `reference-index.md`, `asset-checklist.md`, `learnings-registry.md`, or `experiments-backlog.md`.
+Add only confirmed summary facts here. Put detail in the source files listed above.

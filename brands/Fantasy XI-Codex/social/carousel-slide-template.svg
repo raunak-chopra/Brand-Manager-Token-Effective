@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Deadline XI carousel template</title>
+  <desc id="desc">Square carousel slide for Lock Watch Punt Avoid fantasy football content.</desc>
+  <rect width="1080" height="1080" fill="#07111F"/>
+  <rect x="54" y="54" width="972" height="972" rx="26" fill="#091826" stroke="#273142" stroke-width="6"/>
+  <rect x="94" y="94" width="314" height="68" rx="10" fill="#12B76A"/>
+  <text x="120" y="142" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="36" font-weight="900" fill="#07111F">DEADLINE XI</text>
+  <text x="96" y="342" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="128" fill="#F7F7F2">3 BEFORE</text>
+  <text x="96" y="472" font-family="WORLD-Condensed, Bigstage, Impact, Arial Black, sans-serif" font-size="138" fill="#F5B841">LOCK</text>
+  <rect x="96" y="570" width="888" height="126" rx="18" fill="#0D2232"/>
+  <text x="132" y="648" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#12B76A">LOCK: [PLAYER]</text>
+  <rect x="96" y="724" width="888" height="126" rx="18" fill="#0D2232"/>
+  <text x="132" y="802" font-family="Inter-Soccer, Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#F5B841">PUNT: [PLAYER]</text>
+  <rect x="96" y="878" width="888" height="86" rx="18" fill="#EF4444"/>
+  <text x="540" y="934" text-anchor="middle" font-family="Manuver, Arial, Helvetica, sans-serif" font-size="36" font-weight="900" fill="#F7F7F2">COMMENT DRAFT FOR REVIEW</text>
+</svg>

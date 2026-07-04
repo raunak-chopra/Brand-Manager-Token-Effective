@@ -1,22 +1,10 @@
-# Brand Manager Bot
+# Docs Index
 
-This is the GitHub Pages entry point for the Brand Manager Bot workspace.
+Runtime instructions live in `_core/`, `agents/`, and `skills/`.
 
-## Start Here
+Use `docs/` for human-facing explanations only. Do not load docs during normal tasks unless the user asks for documentation, governance, migration notes, or workspace maintenance.
 
-- [Usage guide](../usageguide.md)
-- [Assistant rules](../AGENTS.md)
-- [Quick command reference](../cheatsheet.md)
-- [GitHub publishing guide](./github-pages.md)
+## Current Docs
 
-## Workspace Areas
-
-- `agents/` - specialist behavior and routing.
-- `skills/` - reusable marketing workflows.
-- `brands/` - brand-specific working context.
-- `outputs/` - final and shareable deliverables.
-- `tools/` - integration guidance and local CLI stubs.
-
-## Source Integrity
-
-Use `[To be supplied]` for missing facts. Do not publish secrets, raw platform exports, private customer data, invented claims, or unsourced performance results.
+- `docs/migration.md` - superbot rework summary.
+- `docs/governance.md` - documentation and archive rules.

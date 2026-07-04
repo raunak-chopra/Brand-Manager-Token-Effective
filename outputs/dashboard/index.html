@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Manager Bot - Workspace Portal</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-header">
+        <div class="logo-dot"></div>
+        <h2>BrandBot <span>v2.0</span></h2>
+      </div>
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="tokens">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2zm0 8H7v-2h10v2z"/></svg>
+          Token Analytics
+        </button>
+        <button class="nav-item" data-tab="offline">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          Local Workspace
+        </button>
+        <button class="nav-item" data-tab="hygiene">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+          Hygiene Triage
+        </button>
+        <button class="nav-item" data-tab="graph">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M16 11.78V5.07c0-.6-.4-1.07-1-1.07-.6 0-1 .47-1 1.07v6.71l-2 1.15-2-1.15V5.07c0-.6-.4-1.07-1-1.07s-1 .47-1 1.07v6.71L3.92 14.1l1 1.73L9 13.5v5.57l-4.1 2.37 1 1.73L10 20.8v1.7c0 .6.4 1.1 1 1.1s1-.5 1-1.1v-1.7l4.1 2.37 1-1.73L13 19.07v-5.57l4.08 2.36 1-1.73L16 11.78z"/></svg>
+          Workspace Map
+        </button>
+        <button class="nav-item" data-tab="meta">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.58 10.48 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-8h-2v4h4v-2h-2V10z"/></svg>
+          Meta-Skill Observer
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-panel">
+          <span class="status-indicator online" id="syncStatus"></span>
+          <span class="status-text">Local File Mode</span>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="toggleModeBtn">Local Mode</button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Content -->
+    <main class="main-content">
+      <header class="content-header">
+        <h1 id="tabTitle">Token Analytics</h1>
+        <div class="header-actions">
+          <span class="brand-badge" id="activeBrand">All Brands</span>
+          <button class="btn btn-primary btn-sm" id="refreshBtn">Refresh Data</button>
+        </div>
+      </header>
+
+      <!-- Token Analytics View -->
+      <section class="tab-content active" id="tab-tokens">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Cumulative Total Tokens</h3>
+            <p class="stat-value" id="cumulativeTotal">--</p>
+            <span class="stat-sub" id="cumulativeTasks">-- runs recorded</span>
+          </div>
+          <div class="stat-card">
+            <h3>Input / Output Balance</h3>
+            <p class="stat-value"><span id="cumulativeInput">--</span> <span class="divider">/</span> <span id="cumulativeOutput" class="accent">--</span></p>
+            <span class="stat-sub">Tokens (In vs. Out)</span>
+          </div>
+          <div class="stat-card">
+            <h3>Estimated Costs</h3>
+            <p class="stat-value" id="estimatedCost">$0.00</p>
+            <span class="stat-sub">Based on model average pricing</span>
+          </div>
+          <div class="stat-card">
+            <h3>Data Source</h3>
+            <p class="stat-value" id="cacheSavings">--</p>
+            <span class="stat-sub" id="cacheSavingsVal">--</span>
+          </div>
+        </div>
+
+        <div class="layout-grid">
+          <!-- Recent Runs Chart Container -->
+          <div class="card chart-card">
+            <div class="card-header">
+              <h2>Recent Execution Runs</h2>
+              <span class="card-sub">Last 6 tasks and their token split</span>
+            </div>
+            <div class="bar-chart-container">
+              <svg class="bar-chart" id="runChart" viewBox="0 0 600 240"></svg>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-dot in"></span> Input Est</span>
+              <span class="legend-item"><span class="legend-dot out"></span> Output Est</span>
+            </div>
+          </div>
+
+          <!-- Model Price Calculator -->
+          <div class="card text-card">
+            <div class="card-header">
+              <h2>Model Price Comparison</h2>
+              <span class="card-sub">Comparative cost estimate for total runs</span>
+            </div>
+            <table class="data-table" id="priceTable">
+              <thead>
+                <tr>
+                  <th>Model Provider</th>
+                  <th>In Cost / M</th>
+                  <th>Out Cost / M</th>
+                  <th>Total Est Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Historical Usage List -->
+        <div class="card full-width">
+          <div class="card-header">
+            <h2>Workspace Log History</h2>
+            <span class="card-sub">Run metrics embedded from logs/context-usage/token-data.json for file:// use</span>
+          </div>
+          <table class="data-table" id="historyTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Brand</th>
+                <th>Task Description</th>
+                <th>Input Tokens</th>
+                <th>Output Tokens</th>
+                <th>Total Tokens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Offline Workspace View -->
+      <section class="tab-content" id="tab-offline">
+        <div class="layout-grid">
+          <!-- Offline Status Panel -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Local Sync Status</h2>
+              <span class="card-sub">Local codebase validation metrics</span>
+            </div>
+            <ul class="meta-list">
+              <li>
+                <span class="list-label">Workspace Path:</span>
+                <span class="list-val monospace">c:\Users\raunak.chopra\Desktop\Al Bots\Brand Manager Bot</span>
+              </li>
+              <li>
+              <span class="list-label">Runtime Status:</span>
+                <span class="list-val badge badge-info">Static local dashboard</span>
+              </li>
+              <li>
+                <span class="list-label">Finding Schema:</span>
+                <span class="list-val badge badge-success">brand-manager-dashboard.v1</span>
+              </li>
+              <li>
+                <span class="list-label">Last Database Sync:</span>
+                <span class="list-val" id="lastDbSync">2026-06-12 17:27:08</span>
+              </li>
+              <li>
+                <span class="list-label">Live API Writes:</span>
+                <span class="list-val badge badge-warning">Disabled</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem; display: flex; gap: 10px;">
+              <button class="btn btn-primary" id="exportActionLogBtn">Export Action Log</button>
+            </div>
+          </div>
+
+          <!-- Offline Settings -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Local Model Configuration</h2>
+              <span class="card-sub">External integrations are repo-ready but require user-supplied credentials</span>
+            </div>
+            <form id="offlineSettingsForm" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="localModelSelect">External Runtime</label>
+                <select id="localModelSelect" class="form-control">
+                  <option value="not-configured">[To be supplied]</option>
+                  <option value="user-configured">User-configured local/API runtime</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cacheRatio">Dashboard Schema Version</label>
+                <input type="text" id="cacheRatio" class="form-control" value="brand-manager-dashboard.v1" readonly>
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" id="restrictExternal" checked> Keep dashboard read-only for live campaign/API changes
+                </label>
+              </div>
+              <button class="btn btn-primary" id="saveSettingsBtn">Review Config</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Offline Execution Log -->
+        <div class="card full-width">
+          <div class="card-header">
+            <h2>Local Command Run History</h2>
+            <span class="card-sub">Action history created in this browser session and persisted in localStorage</span>
+          </div>
+          <table class="data-table" id="actionLogTable">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>Finding</th>
+                <th>Action</th>
+                <th>Owner</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hygiene Triage View -->
+      <section class="tab-content" id="tab-hygiene">
+        <div class="hygiene-banner">
+          <div class="banner-info">
+            <h2>Performance Readiness: <span class="rating-val" id="hygieneScore">--</span></h2>
+            <p>Schema-backed triage for URL, UTM, tracking, claim, and launch-readiness findings.</p>
+          </div>
+          <div class="banner-stat">
+            <span class="badge badge-danger" id="criticalCount">0</span> Critical Issues
+          </div>
+        </div>
+
+        <div class="triage-columns">
+          <!-- Critical Issues Column -->
+          <div class="triage-column">
+            <div class="column-header danger">
+              <h3>Critical Findings</h3>
+              <span class="badge badge-danger column-count" id="count-critical">1</span>
+            </div>
+            <div class="triage-list" id="col-critical">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Important Issues Column -->
+          <div class="triage-column">
+            <div class="column-header warning">
+              <h3>Important Findings</h3>
+              <span class="badge badge-warning column-count" id="count-important">2</span>
+            </div>
+            <div class="triage-list" id="col-important">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Monitor Column -->
+          <div class="triage-column">
+            <div class="column-header monitor">
+              <h3>Monitor Findings</h3>
+              <span class="badge badge-info column-count" id="count-monitor">2</span>
+            </div>
+            <div class="triage-list" id="col-monitor">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Codebase Graph View -->
+      <section class="tab-content" id="tab-graph">
+        <div class="layout-grid">
+          <!-- Interactive Node Canvas -->
+          <div class="card chart-card full-width">
+            <div class="card-header">
+              <h2>Codebase Knowledge Structure</h2>
+              <span class="card-sub">Static route map from the local dashboard data contract</span>
+            </div>
+            <div class="graph-canvas-container">
+              <svg id="codebaseGraph" viewBox="0 0 800 450"></svg>
+            </div>
+            <div class="graph-controls">
+              <button class="btn btn-secondary btn-sm" id="zoomInBtn">Zoom In</button>
+              <button class="btn btn-secondary btn-sm" id="zoomOutBtn">Zoom Out</button>
+              <button class="btn btn-secondary btn-sm" id="resetGraphBtn">Reset Layout</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meta-Skill Observer View -->
+      <section class="tab-content" id="tab-meta">
+        <div class="layout-grid">
+          <!-- Meta Skill Overview -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Self-Improving Meta-Loop</h2>
+              <span class="card-sub">Manual workspace observation loop</span>
+            </div>
+            <p>Tracks workflow gaps and candidate improvements for manual review before any skill or doc changes.</p>
+            
+            <div class="observer-health">
+              <div class="health-item">
+                <span class="health-label">Loop Health:</span>
+                <span class="health-val badge badge-success">Excellent</span>
+              </div>
+              <div class="health-item">
+                <span class="health-label">Observations Registered:</span>
+                <span class="health-val text-bold" id="obsCount">14</span>
+              </div>
+              <div class="health-item">
+                <span class="health-label">Autogenerated Skills:</span>
+                <span class="health-val text-bold" id="generatedSkillsCount">3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Observation Register Form -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Submit Workspace Observation</h2>
+              <span class="card-sub">Log workflow gaps and friction points manually</span>
+            </div>
+            <form id="obsForm" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="obsDesc">Friction Point / Correction description</label>
+                <textarea id="obsDesc" class="form-control" rows="3" placeholder="Describe a repeated workflow gap or correction pattern..."></textarea>
+              </div>
+              <button class="btn btn-primary" id="logObsBtn">Log Observation</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Registered Observations -->
+        <div class="card full-width">
+          <div class="card-header">
+            <h2>Observations Registry</h2>
+            <span class="card-sub">Observations logged by task observer or workspace commands</span>
+          </div>
+          <table class="data-table" id="obsTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Observation Title / Friction</th>
+                <th>Impact Score</th>
+                <th>Action Taken</th>
+                <th>Linked Skill</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamic content -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="dashboard-data.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
