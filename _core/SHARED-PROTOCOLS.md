@@ -32,34 +32,7 @@ If requirements are underspecified or design options need alignment:
 
 ---
 
-## 4. Creative Excellence Protocol
-
-When producing creative strategy, campaigns, concepts, visual directions, or brand worlds:
-
-1. Start with the audience tension, not a generic benefit.
-2. Generate distinct strategic routes, not tiny copy variations.
-3. Make each route sensory: color, setting, motion, texture, sound, pace, composition, and voice.
-4. Attach each route to channels and a first execution.
-5. Score ideas before recommending.
-6. Keep unsupported facts, claims, rights, and proof as `[To be supplied]`.
-7. Separate concept visualization from final production.
-
----
-
-## 5. Generated Image Protocol
-
-When creating or editing generated imagery:
-
-- Use only supplied references or brand-approved assets.
-- Never invent logos, packaging claims, badges, certifications, testimonials, or metrics.
-- Prefer no in-image text unless exact approved text is supplied.
-- Every prompt must include ratio, safe area, avoidances, and intended use.
-- Track prompts and asset status when working inside a named brand.
-- Treat generated imagery as concept visualization unless final production status is explicitly approved.
-
----
-
-## 6. Missing Inputs Checklist
+## 4. Missing Inputs Checklist
 
 When a task is blocked by absent facts, flag the specific missing fields from this checklist:
 

@@ -34,22 +34,6 @@ Lead with useful output, preserve source integrity, and load only what is needed
 - **Compression First**: For long or repeated context, use `_core/COMPRESSION-RULES.md` and retrieve originals only when exact proof, wording, or edits are needed.
 - **Routed Retrieval**: Use `_core/CONTEXT-ROUTER.md` when a task could pull from many files.
 
-## Creative Agency Mode
-
-Use Creative Agency Mode when the user explicitly asks for creative exploration, originality, image concepts, campaign routes, brand worlds, concept boards, or agency-grade output.
-
-Creative Agency Mode may load more context than Fast Mode, but still uses lazy loading:
-
-1. Brand `context-index.md` when a brand is named.
-2. `agents/creative-director.md`.
-3. `skills/creative-system/SKILL.md`.
-4. One active creative reference.
-5. One active workflow.
-
-Creative outputs should favor multiple distinct routes, sensory specificity, audience tension, ownable brand language, visual production notes, scoring, and a clear recommendation.
-
-Do not sacrifice source integrity for drama. Unsupported claims, rights, market facts, proof, and legal constraints remain `[To be supplied]`.
-
 ## Execution Discipline
 
 - State assumptions when ambiguity changes the output.

@@ -45,9 +45,6 @@ First-read file for this brand. Keep it compact.
 | Assets or gaps | `asset-checklist.md` |
 | Asset inventory | `asset-inventory.md` |
 | Prompt inventory | `prompt-library.md` |
-| Creative territories | `creative-territories.md` |
-| Creative winners | `creative-winners.md` |
-| Generated image concepts | `generated-image-log.md` |
 | Confirmed learnings | `learnings-registry.md` |
 | Tests | `experiments-backlog.md` |
 | Readiness score | `brand-readiness-score.md` |
